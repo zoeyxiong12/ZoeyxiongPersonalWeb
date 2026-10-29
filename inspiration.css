@@ -1,0 +1,50 @@
+.inspiration-main{padding-top:65px;padding-bottom:65px}.inspiration-intro{max-width:650px;margin-bottom:44px}.inspiration-intro>.about-text-link{margin-bottom:40px}.inspiration-intro .eyebrow{margin-bottom:16px}.inspiration-intro h1{font-size:clamp(48px,6vw,80px);font-weight:500;letter-spacing:-2.5px;line-height:1.1;margin:0 0 20px}.inspiration-intro p{font-size:18px;line-height:1.6;color:#737b85;margin:0}.inspiration-wall{columns:4;column-gap:28px}.inspiration-wall>.journal-figure{display:inline-block;break-inside:avoid;width:100%;max-width:100%;margin:0 0 30px}.inspiration-wall .journal-video{width:100%;max-height:none;height:auto}.inspiration-wall .journal-figure figcaption{font-size:11px;line-height:1.4;white-space:normal;margin-top:10px}.inspiration-page .footer{margin-top:0}.inspiration-teaser .about-text-link{margin-top:16px}@media(max-width:1100px){.inspiration-wall{columns:3;column-gap:22px}}@media(max-width:700px){.inspiration-main{padding-top:35px}.inspiration-wall{columns:2;column-gap:16px}.inspiration-wall>.journal-figure{margin-bottom:22px}.inspiration-intro{margin-bottom:30px}}@media(max-width:420px){.inspiration-wall{columns:1}}
+/* Shared site header rules must not apply to the gallery introduction. */
+.inspiration-page .inspiration-intro{position:static;inset:auto;z-index:auto;display:block;width:auto;height:auto;background:transparent;backdrop-filter:none;border:0;box-shadow:none;padding:0;margin:0 0 40px;max-width:none}
+.inspiration-page .inspiration-intro h1{font-size:clamp(42px,4vw,60px)}
+.inspiration-page .inspiration-main{padding-top:48px}
+/* Compact masonry: original image ratios, no frames or fixed image heights. */
+.inspiration-page .inspiration-wall{display:block;columns:5;column-gap:18px}
+.inspiration-page .inspiration-wall>.journal-figure{display:inline-block;break-inside:avoid;width:100%;min-width:0;margin:0 0 22px}
+.inspiration-page .inspiration-wall .journal-photo,.inspiration-page .inspiration-wall .journal-video{width:100%;height:auto;max-height:none;background:none;overflow:visible;aspect-ratio:var(--media-ratio);border-radius:4px}
+.inspiration-page .inspiration-wall .journal-photo img{display:block;width:100%;height:auto;object-fit:contain;aspect-ratio:var(--media-ratio);background:none}
+.inspiration-page .inspiration-wall figcaption{font-size:10px;line-height:1.4;margin-top:7px}
+@media(min-width:1500px){.inspiration-page .inspiration-wall{columns:6;column-gap:20px}}
+@media(max-width:1100px){.inspiration-page .inspiration-wall{columns:4;column-gap:16px}}
+@media(max-width:700px){.inspiration-page .inspiration-wall{columns:3;column-gap:14px}}
+@media(max-width:480px){.inspiration-page .inspiration-wall{columns:2;column-gap:12px}}
+
+/* Let the introduction share the gallery’s full right edge. */
+.inspiration-page .inspiration-intro,.inspiration-page .inspiration-intro p{width:100%;max-width:none}
+.inspiration-page .inspiration-wall figcaption{word-break:normal;overflow-wrap:normal;hyphens:none}
+
+/* Natural masonry: preserve intrinsic media proportions and fixed spacing. */
+.inspiration-page .inspiration-wall{display:block;columns:5;column-gap:18px}
+.inspiration-page .inspiration-wall>.journal-figure{display:inline-block;vertical-align:top;width:100%;height:auto;margin:0 0 22px;break-inside:avoid}
+.inspiration-page .inspiration-wall .journal-photo{display:block;width:100%;height:auto;aspect-ratio:auto;background:none;overflow:visible}
+.inspiration-page .inspiration-wall .journal-photo img,.inspiration-page .inspiration-wall .journal-video{display:block;width:100%;height:auto;min-height:0;max-height:none;aspect-ratio:auto;object-fit:contain;background:none}
+@media(min-width:1500px){.inspiration-page .inspiration-wall{columns:6;column-gap:20px}}
+@media(max-width:1100px){.inspiration-page .inspiration-wall{columns:4;column-gap:16px}}
+@media(max-width:700px){.inspiration-page .inspiration-wall{columns:3;column-gap:14px}}
+@media(max-width:480px){.inspiration-page .inspiration-wall{columns:2;column-gap:12px}}
+
+/* Lift the dim exhibition photograph without altering the source file. */
+.inspiration-wall [data-source-id="136"] img { filter: brightness(1.12) saturate(1.18) contrast(1.03); }
+
+/* Keep the blue Gallery visit portrait at the start of the rightmost desktop column. */
+@media(min-width:1500px){.inspiration-page .inspiration-wall>[data-source-id="127"]{break-before:column}}
+
+/* New videos sit below the established gallery, without rebalancing its columns. */
+.inspiration-page .inspiration-additions{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px;columns:auto;align-items:start;margin-top:0}
+@media(min-width:1500px){.inspiration-page .inspiration-additions{grid-template-columns:repeat(6,minmax(0,1fr));gap:20px}}
+@media(max-width:1100px){.inspiration-page .inspiration-additions{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}}
+@media(max-width:700px){.inspiration-page .inspiration-additions{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}}
+@media(max-width:480px){.inspiration-page .inspiration-additions{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}}
+
+/* Separate the two new clips without touching the established gallery. */
+.inspiration-page .inspiration-additions>[data-source-id="145"]{grid-column:1;grid-row:1}
+.inspiration-page .inspiration-additions>[data-source-id="146"]{grid-column:3;grid-row:1}
+@media(max-width:480px){.inspiration-page .inspiration-additions>[data-source-id="146"]{grid-column:2;grid-row:2}}
+
+/* A light lift for the white-jacket gallery photograph, including enlargement. */
+.inspiration-page img[src*="source-128"]{filter:brightness(1.1) saturate(1.03)}

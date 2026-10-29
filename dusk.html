@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en"
+  ><head
+    ><meta charset="utf-8" /><meta
+      name="viewport"
+      content="width=device-width,initial-scale=1" /><title>Dusk · Zoey Xiong</title
+    ><link rel="stylesheet" href="style.css?v=dusk-testing-build-gap72-20261029" /><link rel="icon" type="image/png" href="assets/zoey-ribbon-favicon.png?v=ribbon-3" /><script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "yv1150ggmt");
+    </script>
+</head
+  ><body
+    ><header
+      ><nav class="nav" aria-label="Main navigation"
+        ><a class="brand" href="index.html"
+          >Zoey Xiong</a
+        ><div class="links"
+          ><a href="index.html#work">Work</a><a href="about.html">About</a
+          ><a href="inspiration.html">Inspiration</a><a
+            href="assets/Zoey-Xiong-Product-Designer-CV.pdf"
+            target="_blank"
+            rel="noopener"
+            >CV ↗</a
+          ></div
+        ></nav
+      ></header
+    ><main class="wrap dusk-case"
+      ><div class="dusk-heading"
+        ><a class="arrow" href="index.html#work">← Selected work</a
+        ><div class="dusk-cover">
+          <div class="dusk-cover-copy"><div class="eyebrow">Solo project · Product design &amp; development</div><h1>Dusk</h1><p class="dusk-lead">An AI tool for generating work reports.</p></div>
+          <div class="dusk-cover-art"><img src="assets/dusk-cover-screen-animated.svg?v=16" width="946" height="673" alt="Dusk Capture interface in a front-facing screen mockup, with work notes ready to organise." fetchpriority="high" /></div>
+        </div>
+        <dl class="dusk-project-meta">
+            <div><dt>Role</dt><dd>Product design · Frontend development · LLM integration</dd></div>
+            <div><dt>Timeline</dt><dd>Functional prototype: 2–3 days · UI design: ~2 weeks</dd></div>
+            <div><dt>Status</dt><dd>Functional prototype · UI implementation in progress</dd></div>
+            <div><dt>Platform</dt><dd>Web app <span class="platform-link-separator">·</span> <a class="platform-project-link" href="https://github.com/zoeyxiong12/dusk-prototype" target="_blank" rel="noopener noreferrer">View code ↗</a></dd></div>
+            <div><dt>Tech stack</dt><dd>Next.js · TypeScript · Groq API</dd></div>
+            <div><dt>AI focus</dt><dd>Structured output prompting · Llama 3.3 70B</dd></div>
+          </dl><div class="testing-personal-result"><div class="testing-personal-label">Result from my own use</div><h3>Daily report preparation dropped from <mark class="testing-result-highlight">~30 to ~7 minutes.</mark></h3><p>Estimated from my own use of Dusk.</p></div></div
+      ><div class="case"
+        ><aside class="toc" aria-label="Project contents"
+          ><a class="case-home-link" href="index.html#work">← Back to work</a><div class="eyebrow">Contents</div><a href="#overview">01 Overview</a
+          ><a href="#journey">02 User journey</a><a href="#research">03 Research</a
+          ><a href="#product">04 Product walkthrough</a><a href="#decisions">05 Design decisions</a
+          ><a href="#testing">06 Testing & next steps</a
+          ><a href="#build">07 How I built it</a><a href="#design-system">08 Design system</a></aside
+        ><article
+          ><section id="overview"
+            ><div class="eyebrow">01 · Overview</div><h2>The problem</h2
+            ><p
+              >At work, I had a <span class="report-mark standup-mark">morning stand-up</span> every
+              day, a <span class="report-mark daily-mark">daily report</span> due before I finished,
+              a <span class="report-mark weekly-mark">weekly report</span> every Friday, and a
+              <span class="report-mark monthly-mark">monthly report</span>. They often covered the same work.</p
+            ><h3 class="overview-subhead">My work log for preparing reports</h3>
+            <p>I started keeping a work log so I could record my work once and reuse the notes with AI for different reports, instead of starting from scratch each time. When I needed a report, I copied the relevant entries from Notion into an AI tool to generate it.</p>
+            <figure class="notion-evidence">
+              <div class="notion-annotated-image"><div class="notion-image-scroll"><div class="notion-image-canvas"><img src="assets/notion-work-log-compact.svg?v=2" width="3284" height="1364" alt="Notion work log showing twelve selected records with project, work type, week, quarter and status." loading="lazy" /></div></div></div>
+              <figcaption>Selected entries from my Notion work log, anonymised to protect company IP.</figcaption>
+            </figure>
+            <div class="overview-group log-structure-group">
+              <h3 class="overview-subhead">Work-log structure</h3>
+              <p>I found that good work reports focused on results and numbers. As I used my Notion log, I kept revising its structure to help me measure my output. Project and work type let me group entries and quickly count what I had completed, for example, the number of specs written or feedback rounds completed for each project. Dates let me filter those entries to a specific reporting period.</p>
+              <!-- Paperclip path: Lucide / Feather, https://github.com/lucide-icons/lucide/blob/main/icons/paperclip.svg
+ISC License. Copyright (c) 2026 Lucide Icons and Contributors. Copyright (c) 2013-2022 Cole Bemis.
+Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE. -->
+              <div class="log-structure-notes">
+                <div><span class="log-paper-pin" aria-hidden="true"></span><h4>Work type</h4><p>Grouping entries by work type let me quickly calculate the numbers I needed for each report, such as the number of specs written during the selected period.</p></div>
+                <div><span class="log-paper-pin" aria-hidden="true"></span><h4>Project</h4><p>Grouping by project kept reports relevant to each project lead. Even with the same lead, it helped me show my contribution to each project.</p></div>
+                <div><span class="log-paper-pin" aria-hidden="true"></span><h4>Week</h4><p>I also recorded the week alongside the date, since work is often summarised on a weekly basis. This made it easier to group entries for each reporting period.</p></div>
+
+              </div>
+            </div>
+            <div class="overview-group dusk-transition-group"
+              ><h3 class="overview-subhead">Why I built Dusk</h3
+              ><p
+                >I was tired of reporting on the same work again and again for different reports, and switching between apps each time to gather the information I needed. Since I was already using AI to generate reports, why not create a product with AI built in so I could complete every step in one tool?</p><p>I also used my work log when developing Dusk. Its 242 entries captured eight months of actual tasks and the categories I had assigned to them. Those existing pairings made it a useful dataset for teaching Dusk how to match new notes to projects and work types.</p
+              ></div
+            ></section
+          ><section id="journey">
+  <div class="eyebrow">02 · User journey</div>
+  <figure class="user-workflow-figure">
+    <img src="assets/dusk-workflow-comparison-color.svg?v=13" width="2134" height="1363" alt="Reporting workflow and proposed AI workflow compared. A typical daily report takes approximately 30 minutes. Proposed workflow: describe work in everyday language, AI organises notes and generates a report, then review and copy it into the reporting form." />
+  </figure>
+</section><section id="research">
+  <div class="eyebrow">03 · Research</div>
+  <h2>How participants record and report their work</h2>
+  <p class="research-intro">I sent an online questionnaire to 12 people in different roles. I asked how they reported their work, where they kept their records, and whether they used AI to write reports.</p>
+  <div class="participant-roles"><span class="participant-label">Participants’ roles</span><div class="participant-pills"><span>Software engineering</span><span>Finance</span><span>Audit</span><span>Product design</span><span>Technical operations &amp; QA</span><span>Lab work</span><span>Filming</span></div></div>
+  <div class="research-stats"><div class="research-stat"><div class="stat-count"><strong>12</strong><span>of 12</span></div><h3>Report their work</h3><p>Nine had a regular reporting schedule.<br>The other three reported only when asked.</p></div><div class="research-stat"><div class="stat-count"><strong>6</strong><span>of 12</span></div><h3>Keep a work log consistently</h3><p>Three struggled to keep their logs up to date.<br>One had stopped logging.<br>Two had never kept a work log.</p></div><div class="research-stat"><div class="stat-count"><strong>10</strong><span>of 12</span></div><h3>Use AI to write reports</h3><p>Seven used AI for most of their reports.<br>Three used it sometimes.</p></div></div>
+  <p class="research-method">August 2026 · 12 respondents · Recruited through my own network · Run after v0.2 was built <a class="research-source-link" href="https://docs.google.com/spreadsheets/d/19qDLcxwijTZJ2LG-hYFs9ykZ-EuWKFFAKaCpBLzF4Wc/edit?gid=1896059191#gid=1896059191" target="_blank" rel="noopener noreferrer"><span>View survey responses</span> <span class="survey-link-arrow" aria-hidden="true">↗</span></a></p>
+  <div class="research-observation">
+    <blockquote class="participant-quote"><p>“A lot of the information has already been written in tickets or messages, so reporting can sometimes mean summarising the same information again.”</p><footer><strong>— Bruce</strong><span>Technical Operations &amp; QA Specialist</span></footer></blockquote>
+    <div class="research-interpretation"><h3>What this meant for Dusk</h3><p>Bruce’s answer echoed my own experience: recording work did not remove the effort of preparing a report. This reinforced my decision to let users reuse the entries they had already logged in Dusk to generate different reports.</p></div>
+  </div>
+
+</section><section id="product">
+  <div class="eyebrow walkthrough-chapter">04 · Product walkthrough</div>
+  <h3 class="walkthrough-part-title"><span>01</span>How to log your work</h3>
+  <p class="capture-intro">I wanted logging work to feel lightweight, without asking users to fill in each field separately. Users describe their work in plain language, and AI organises the notes into entries matched to their saved projects and work types.</p>
+  
+  <div class="capture-walkthrough">
+    <div class="capture-screen">
+      <img src="assets/dusk-capture-v8.svg?v=3" width="918" height="645" alt="Dusk Capture screen with work input, project settings and today's work entries." loading="lazy" />
+      <button type="button" class="capture-hotspot" data-step="1" style="--spot-x:21.25%;--spot-y:35.37%" aria-label="Step 1: Automatic categorisation" aria-controls="capture-explanation" aria-pressed="true"><svg viewBox="14 14 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path class="step-disc" d="M30 45C38.2843 45 45 38.2843 45 30C45 21.7157 38.2843 15 30 15C21.7157 15 15 21.7157 15 30C15 38.2843 21.7157 45 30 45Z" stroke-width="1.7"/><path class="step-digit" d="M31.7026 24.6945V36.4399H29.2193V27.0516H29.1505L26.4607 28.7377V26.5354L29.3684 24.6945H31.7026Z"/></svg></button>
+      <button type="button" class="capture-hotspot" data-step="2" style="--spot-x:69.28%;--spot-y:19.89%" aria-label="Step 2: Capture work in plain language" aria-controls="capture-explanation" aria-pressed="false"><svg viewBox="14 14 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path class="step-disc" d="M30 45C38.2843 45 45 38.2843 45 30C45 21.7157 38.2843 15 30 15C21.7157 15 15 21.7157 15 30C15 38.2843 21.7157 45 30 45Z" stroke-width="1.7"/><path class="step-digit" d="M25.952 36V34.2107L30.1329 30.3395C30.4885 29.9954 30.7867 29.6857 31.0276 29.4104C31.2723 29.1351 31.4577 28.8656 31.5839 28.6017C31.71 28.3341 31.7731 28.0454 31.7731 27.7357C31.7731 27.3916 31.6948 27.0953 31.538 26.8468C31.3812 26.5945 31.1671 26.4014 30.8957 26.2676C30.6242 26.1299 30.3164 26.0611 29.9723 26.0611C29.6129 26.0611 29.2994 26.1337 29.0318 26.279C28.7641 26.4243 28.5577 26.6327 28.4124 26.9042C28.2671 27.1756 28.1944 27.4987 28.1944 27.8734H25.8373C25.8373 27.1049 26.0113 26.4377 26.3592 25.8718C26.7071 25.306 27.1946 24.8682 27.8217 24.5585C28.4487 24.2488 29.1713 24.094 29.9895 24.094C30.8307 24.094 31.5628 24.2431 32.1861 24.5413C32.8131 24.8357 33.3006 25.2448 33.6485 25.7686C33.9964 26.2924 34.1704 26.8927 34.1704 27.5694C34.1704 28.0129 34.0825 28.4507 33.9066 28.8828C33.7345 29.3148 33.4268 29.7946 32.9832 30.3223C32.5397 30.8461 31.9146 31.475 31.1079 32.2091L29.3931 33.8895V33.9698H34.3252V36H25.952Z"/></svg></button>
+      <button type="button" class="capture-hotspot" data-step="3" style="--spot-x:82.25%;--spot-y:82.74%" aria-label="Step 3: Review and confirm entries" aria-controls="capture-explanation" aria-pressed="false"><svg viewBox="14 14 31 31" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path class="step-disc" d="M29.5 44C37.5081 44 44 37.5081 44 29.5C44 21.4919 37.5081 15 29.5 15C21.4919 15 15 21.4919 15 29.5C15 37.5081 21.4919 44 29.5 44Z" stroke-width="1.7"/><path class="step-digit" d="M29.2935 36.1606C28.437 36.1606 27.6743 36.0134 27.0052 35.719C26.3399 35.4208 25.8142 35.0117 25.428 34.4917C25.0457 33.9679 24.8488 33.3638 24.8373 32.6794H27.3378C27.3531 32.9661 27.4468 33.2185 27.6188 33.4364C27.7947 33.6505 28.0279 33.8168 28.3185 33.9354C28.6091 34.0539 28.936 34.1132 29.2992 34.1132C29.6777 34.1132 30.0123 34.0462 30.3029 33.9124C30.5934 33.7786 30.8209 33.5932 30.9853 33.3561C31.1497 33.1191 31.2319 32.8457 31.2319 32.536C31.2319 32.2225 31.144 31.9453 30.9681 31.7044C30.7961 31.4597 30.5476 31.2686 30.2226 31.1309C29.9014 30.9933 29.5191 30.9244 29.0756 30.9244H27.9801V29.1007H29.0756C29.4502 29.1007 29.781 29.0357 30.0677 28.9057C30.3583 28.7757 30.5839 28.596 30.7445 28.3666C30.905 28.1334 30.9853 27.8619 30.9853 27.5522C30.9853 27.2578 30.9146 26.9997 30.7731 26.778C30.6355 26.5524 30.4405 26.3765 30.1882 26.2504C29.9396 26.1242 29.6491 26.0611 29.3164 26.0611C28.98 26.0611 28.6722 26.1223 28.3931 26.2446C28.114 26.3631 27.8903 26.5333 27.7221 26.755C27.5538 26.9768 27.464 27.2368 27.4525 27.535H25.0725C25.0839 26.8583 25.277 26.2618 25.6517 25.7457C26.0264 25.2295 26.5311 24.8261 27.1658 24.5356C27.8043 24.2412 28.525 24.094 29.3279 24.094C30.1385 24.094 30.8477 24.2412 31.4556 24.5356C32.0635 24.83 32.5357 25.2276 32.8722 25.7285C33.2125 26.2255 33.3807 26.7837 33.3769 27.4031C33.3807 28.0607 33.1761 28.6094 32.7632 29.0491C32.3541 29.4888 31.8207 29.7679 31.1631 29.8864V29.9782C32.0272 30.089 32.6848 30.3892 33.136 30.8786C33.591 31.3641 33.8166 31.9721 33.8127 32.7023C33.8166 33.3714 33.6235 33.966 33.2335 34.4859C32.8473 35.0059 32.314 35.415 31.6334 35.7132C30.9528 36.0115 30.1729 36.1606 29.2935 36.1606Z"/></svg></button>
+      <button type="button" class="capture-hotspot" data-step="4" style="--spot-x:36.39%;--spot-y:92.78%" aria-label="Step 4: Select entries and generate a report" aria-controls="capture-explanation" aria-pressed="false"><svg viewBox="14 14 31 31" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path class="step-disc" d="M29.5 44C37.5081 44 44 37.5081 44 29.5C44 21.4919 37.5081 15 29.5 15C21.4919 15 15 21.4919 15 29.5C15 37.5081 21.4919 44 29.5 44Z" stroke-width="1.7"/><path class="step-digit" d="M24.7742 33.9354V31.9797L29.6777 24.2545H31.3638V26.9615H30.3659L27.2747 31.8535V31.9453H34.2429V33.9354H24.7742ZM30.4118 36V33.3389L30.4577 32.4729V24.2545H32.7862V36H30.4118Z"/></svg></button>
+    <p class="capture-image-hint">Select a numbered step to explore</p></div>
+    <div id="capture-explanation" class="capture-explanation" aria-live="polite" aria-atomic="true">
+      <div class="capture-step is-current" data-step="1"><span class="capture-step-number">1</span><div><h3>Automatic categorisation</h3><p>Auto-detect matches work notes to saved projects and work types, reducing the need to categorise each entry manually.</p></div></div>
+      <div class="capture-step" data-step="2" hidden><span class="capture-step-number">2</span><div><h3>Capture work in plain language</h3><p>An example in the input box guides users to describe their work in plain language, without filling in separate fields.</p></div></div>
+      <div class="capture-step" data-step="3" hidden><span class="capture-step-number">3</span><div><h3>Review and confirm entries</h3><p>“To confirm” shows how many entries still need checking. Users review and correct each entry before saving it to their work log.</p></div></div>
+      <div class="capture-step" data-step="4" hidden><span class="capture-step-number">4</span><div><h3>Select entries and generate a report</h3><p>Users select the confirmed entries they need, then generate a work report.</p></div></div>
+      
+    </div>
+  </div>
+  <h3 class="walkthrough-part-title review-subheading"><span>02</span>Reviewing and confirming entries</h3>
+  <div class="review-detail-layout">
+    <img src="assets/dusk-review-list-v5.svg" width="719" height="596" alt="Today’s log with confirmed entries, entries awaiting confirmation, and report selection." loading="lazy" />
+    <div class="review-flow" role="region" tabindex="0" aria-label="Review and report workflow. Scroll to view the entry states."><p class="review-scroll-hint">Scroll to explore the entry states ↓</p><div class="review-flow-step"><h3 class="review-flow-toggle"><span>1</span>Review</h3><div class="review-flow-panel" id="review-flow-1"><p>Click Review to check the AI-generated entry.</p><img src="assets/dusk-flow-review-v5.svg" width="505" height="75" alt="Entry awaiting confirmation." loading="lazy" /></div></div><div class="review-flow-step"><h3 class="review-flow-toggle"><span>2</span>Edit / Confirm</h3><div class="review-flow-panel" id="review-flow-2"><p>Check the project, work type and description. Make any changes you need before confirming.</p><img src="assets/dusk-flow-edit-type-v5.svg" width="505" height="132" alt="Edit the work type using the dropdown." loading="lazy" /><img src="assets/dusk-flow-edit-text-v5.svg" width="505" height="116" alt="Edit the entry description inline." loading="lazy" /></div></div><div class="review-flow-step"><h3 class="review-flow-toggle"><span>3</span>Confirmed</h3><div class="review-flow-panel" id="review-flow-3"><p>The green dot shows that the entry is confirmed and can be selected for your report.</p><img src="assets/dusk-flow-confirmed-v5.svg" width="505" height="74" alt="Confirmed entry, ready to select." loading="lazy" /></div></div><div class="review-flow-step"><h3 class="review-flow-toggle"><span>4</span>Select & Generate</h3><div class="review-flow-panel" id="review-flow-4"><p>Select the entries you need, then generate your report.</p><img src="assets/dusk-flow-selected-generate-v5.svg" width="505" height="125" alt="Selected entry and Generate report action." loading="lazy" /></div></div><div class="review-flow-step"><h3 class="review-flow-toggle"><span>5</span>Edit a confirmed entry</h3><div class="review-flow-panel"><p>Hover over a confirmed entry to reveal the edit and delete options.</p><img src="assets/dusk-flow-hover-v5.svg" width="505" height="80" alt="Confirmed entry with edit and delete controls visible on hover." loading="lazy" /></div></div></div>
+  </div>
+  <div class="report-walkthrough" id="report-walkthrough">
+    <h3 class="walkthrough-part-title"><span>03</span>Generate reports from your work log</h3>
+    <p class="report-walkthrough-intro">Choose a report type and the entries to include. A notice shows how many entries still need confirmation, with a Review link to check them in Capture. When you return, your earlier choices stay selected, and the newly confirmed entries are already ticked.</p>
+    <div id="report-panel-daily" class="report-view-panel">
+      <div class="report-use-case"><h4>Daily standup</h4><p>For your daily team sync, report on yesterday’s work and today’s plan.</p></div>
+      <img src="assets/dusk-report-daily-standup-v3.svg?v=source-update-2" width="918" height="645" alt="Daily standup report showing the last workday’s progress, today’s plan and work on hold, alongside source entries and a Copy report button." loading="lazy" />
+    </div>
+    <div id="report-panel-progress" class="report-view-panel">
+      <div class="report-use-case"><h4>Progress update</h4><p>Choose any time range to summarise your work by project, with numbers showing what you completed.</p></div>
+      <img src="assets/dusk-report-progress-update-v5.svg?v=source-update-2" width="918" height="645" alt="Progress update report summarising the selected period by project, with source entries, date range and Copy report controls." loading="lazy" />
+    </div>
+  </div>
+
+<div class="report-walkthrough" id="work-history-walkthrough"><!-- Same card presentation as reports. --><h3 class="walkthrough-part-title"><span>04</span>Look back at your work</h3><p class="report-walkthrough-intro">Keeping a work log helps you do more than write reports. You can check what you did on a particular day, find examples for a performance review or pull together results for your CV.</p><div class="report-view-panel"><div class="report-use-case"><h4>Calendar</h4><p>Select a date to see what you worked on that day.</p></div><img src="assets/dusk-calendar-final.svg?v=source-update-2" width="918" height="645" alt="June 2026 calendar with 19 June selected and six entries in its timeline." loading="lazy" /></div><div class="report-view-panel"><div class="report-use-case"><h4>Dashboard</h4><p>Get a visual overview of your work to quickly see where most of your activity has been.</p></div><img src="assets/dusk-dashboard-final.svg?v=source-update-2" width="918" height="645" alt="Dashboard with 29 confirmed entries across three projects." loading="lazy" /></div></div>
+
+  <div class="mascot-motion-section" id="mascot-motion">
+    <h3 class="walkthrough-part-title"><span>05</span>Mascot states and feedback</h3>
+    <p>I added a mascot to make logging work feel a little more interactive. Its expressions and movements also give users quick feedback on what is happening, from typing a note to waiting for AI or reviewing new entries.</p>
+    <dusk-mascot-states aria-label="Six animated Dusk mascot states"></dusk-mascot-states>
+  </div>
+
+</section
+          ><section id="decisions">
+  <div class="eyebrow">05 · Design decisions</div>
+  <div class="design-decisions">
+    <div class="design-decision">
+      <h3><span class="decision-number">01</span>Set up projects and work types once</h3>
+      <div class="decision-body">
+        <div class="decision-copy">
+          <div><h4>What I tried first</h4><p>I first let users write freely and left the AI to work out the project, work type and status. When a note didn’t mention the work type, AI sometimes guessed wrong. Longer notes were harder to categorise correctly.</p></div>
+          <div class="decision-outcome"><h4>What I changed</h4><p>I added a one-time setup where users list their projects and work types. The AI matches new notes against these lists.</p></div>
+        </div>
+        <figure class="decision-figure decision-product-image"><img src="assets/dusk-decision-work-type-user-v3-contrast.svg?v=5" width="1100" height="568" alt="The same work note classified without a work type list and with a predefined list: AI names the type Dialogue data in the first example and selects Data config in the second. Illustrative example." /></figure>
+      </div>
+    </div>
+    <div class="design-decision">
+      <h3><span class="decision-number">02</span>Separate report purpose from date range</h3>
+      <div class="decision-body">
+        <div class="decision-copy">
+          <div><h4>What I tried first</h4><p>My first version had daily, weekly and monthly reports. Looking back at eight months of my work logs, I saw they used the same entries. The difference was who would read them and how much detail they needed.</p></div>
+          <div class="decision-outcome"><h4>What I changed</h4><p>Users choose the report type and time range separately, so they can use the same work entries for different reports.</p></div>
+        </div>
+        <figure class="decision-figure decision-product-image"><img src="assets/dusk-decision-report-user-v3-contrast.svg?v=5" width="1100" height="568" alt="Before: daily, weekly and monthly report views. After: report type and time range are selected separately." /></figure>
+      </div>
+    </div>
+    <div class="design-decision">
+      <h3><span class="decision-number">03</span>Review AI-generated entries before saving</h3>
+      <div class="decision-body">
+        <div class="decision-copy">
+          <div><h4>What I tried first</h4><p>I first saved AI-generated entries straight to the work log. When I used it myself, the AI sometimes picked the wrong project or work type, and those mistakes carried into later reports.</p></div>
+          <div class="decision-outcome"><h4>What I changed</h4><p>I added a review step before saving. Users can change the project, work type or status, then confirm the entry.</p></div>
+        </div>
+        <figure class="decision-figure decision-product-image"><img src="assets/dusk-decision-review-confirm-v2.svg?v=2" width="1100" height="568" alt="Automatic saving compared with review before saving: the user changes the work type from Meeting to Research, then confirms the entry. Illustrative example." /></figure>
+      </div>
+    </div>
+  </div>
+</section
+          ><section id="testing">
+<div class="eyebrow">06 · Testing &amp; next steps</div>
+<h2>What I learned from the screen feedback</h2>
+<p>I asked the 12 survey participants for feedback on an earlier version of Dusk to check how they understood the design and whether my design decisions made sense to them. They viewed static screens without any explanation of how the product worked.</p>
+
+<p class="testing-method">August 2026 · 12 participants <a href="https://docs.google.com/spreadsheets/d/19qDLcxwijTZJ2LG-hYFs9ykZ-EuWKFFAKaCpBLzF4Wc/edit?gid=1896059191#gid=1896059191" target="_blank" rel="noopener noreferrer"><span>View questionnaire and responses</span> <span class="survey-link-arrow" aria-hidden="true">↗</span></a></p>
+<div class="testing-findings"><div class="testing-finding"><div class="testing-finding-heading"><span class="testing-number">01</span><h3>Half chose the summary for looking back six months later</h3></div><p class="testing-task">I hid the report names to test whether the content alone helped people choose a suitable format for each situation. Tracker showed the full work log, Standup covered yesterday’s work and today’s plan, and Manager summarised recent work.</p><div class="testing-columns"><div class="testing-evidence"><h4>Report choices by situation · 12 participants</h4><table class="testing-choice-summary testing-full-results"><caption class="sr-only">Report choices from 12 participants. Highest counts are highlighted for each situation.</caption><thead><tr><th scope="col">Situation</th><th scope="col">Tracker</th><th scope="col">Standup</th><th scope="col">Manager</th></tr></thead><tbody><tr><th scope="row">Daily team stand-up</th><td>2</td><td class="is-top-choice">10</td><td>0</td></tr><tr><th scope="row">Weekly manager 1:1</th><td>3</td><td>3</td><td class="is-top-choice">6</td></tr><tr><th scope="row">Reference six months later</th><td>4</td><td>2</td><td class="is-top-choice">6</td></tr></tbody></table></div><div class="testing-next"><h4><span class="testing-change">What I changed</span></h4><p>Participants’ choices showed how their reporting needs differed. I moved the full work log into Records and revised the other two formats: Daily standup for short, focused team updates, and Progress update for summarising work over any chosen period. This made reports useful in more situations.</p></div></div></div>
+<div class="testing-finding"><div class="testing-finding-heading"><span class="testing-number">02</span><h3>Only 2 of 12 fully understood the first-time setup screen</h3></div><p class="testing-task">On first use, Dusk asks for two lists: the projects you work on and the types of work you do. It uses these lists to categorise the work notes you enter later. I showed participants this screen without any explanation.</p><div class="testing-columns"><div class="testing-evidence"><div class="testing-chart"><p class="testing-question">What did they think this screen was for?</p><dl><div class="testing-chart-row"><dt>Fully understood the intended purpose</dt><dd><span class="testing-bar-track" style="width:18%"><span class="testing-bar "></span></span><span class="testing-count">2</span></dd></div><div class="testing-chart-row"><dt>Partly understood the intended purpose</dt><dd><span class="testing-bar-track" style="width:36%"><span class="testing-bar "></span></span><span class="testing-count">4</span></dd></div><div class="testing-chart-row"><dt>Thought it was for logging or planning work</dt><dd><span class="testing-bar-track" style="width:54%"><span class="testing-bar is-primary"></span></span><span class="testing-count">6</span></dd></div></dl></div><div class="testing-chart"><p class="testing-question">Did they list projects and work types separately?</p><dl><div class="testing-chart-row"><dt>Listed projects and work types separately</dt><dd><span class="testing-bar-track" style="width:27%"><span class="testing-bar "></span></span><span class="testing-count">3</span></dd></div><div class="testing-chart-row"><dt>Repeated, mixed up or skipped a list</dt><dd><span class="testing-bar-track" style="width:81%"><span class="testing-bar is-primary"></span></span><span class="testing-count">9</span></dd></div></dl></div></div><div class="testing-next"><h4>What I’ll do next</h4><p>I’ll design an onboarding flow that explains why Dusk needs separate project and work type lists, with an example of each before users begin setup. I’ll then test whether users understand the difference and can complete both lists.</p></div></div></div>
+<div class="testing-finding"><div class="testing-finding-heading"><span class="testing-number">03</span><h3>Everyone would keep the confirmation step, but half expected large batches to feel tedious</h3></div><p class="testing-task">Users check AI-generated entries before saving them. I asked participants whether they would keep this step.</p><div class="testing-columns"><div class="testing-evidence"><div class="testing-chart"><p class="testing-question">Would they keep the confirmation step?</p><dl><div class="testing-chart-row"><dt>Keep it, it’s necessary</dt><dd><span class="testing-bar-track" style="width:54%"><span class="testing-bar is-primary"></span></span><span class="testing-count">6</span></dd></div><div class="testing-chart-row"><dt>Keep it, but large batches feel tedious</dt><dd><span class="testing-bar-track" style="width:54%"><span class="testing-bar is-primary"></span></span><span class="testing-count">6</span></dd></div><div class="testing-chart-row"><dt>Remove it</dt><dd><span class="testing-bar-track" style="width:0%"><span class="testing-bar "></span></span><span class="testing-count">0</span></dd></div></dl></div></div><div class="testing-next"><h4>What I’ll do next</h4><p>I’ll design a way to confirm several entries at once while keeping individual entries easy to check and edit. I’ll then test whether it saves time without making errors harder to catch.</p></div></div></div>
+</div>
+</section
+          ><section id="build"><div class="eyebrow">07 · How I built it</div><h2>Designing for reliable AI output</h2><p>In early use, the model sometimes assigned work to the wrong project or work type. I designed constraints and checkpoints around these errors, then built them into a working prototype so I could test the experience myself. The five decisions below explain how I handled categorisation, review and report generation.</p><p class="build-repository-link"><a href="https://github.com/zoeyxiong12/dusk-prototype" target="_blank" rel="noopener noreferrer">View code ↗</a></p><figure class="build-flow"><img src="assets/dusk-build-flow-final.svg?v=3" width="1560" height="534" alt="Work notes are organised, reviewed, corrected if needed and confirmed before saving to Records. Users can then choose report type, time range and work entries, generate a report and copy it." loading="lazy"/></figure><div class="build-groups"><div class="build-group build-row"><div class="build-copy"><h3><span>01</span>Building context from my work log</h3><p>I used Claude to analyse 242 entries from eight months of my actual work, looking at how task names mapped to work types. I used this dataset to develop matching rules for the prompt. The model receives those rules as context.</p></div><div class="build-evidence"><pre><code><span class="code-comment">// Real work examples used to develop matching rules</span>
+<span class="code-string">Task,Type,Project</span>
+<span class="code-string">&quot;Worked on character 1019’s spec&quot;,Spec,2D Card Game</span>
+<span class="code-string">&quot;Reviewed character 1004’s illustration&quot;,Art feedback,2D Card Game</span>
+<span class="code-string">&quot;Tested on the test server&quot;,QA,3D RPG</span>
+<span class="code-string">&quot;Set up character 17’s data&quot;,Data config,Open World</span></code></pre></div></div><div class="build-group build-row"><div class="build-copy"><h3><span>02</span>Limit what the model can choose</h3><p>I send the user’s projects and work types with every request as the options to match against. Entries that fit none are marked Uncategorised for the user to resolve.</p></div><div class="build-evidence"><pre><code>{
+  <span class="code-key">&quot;text&quot;</span>: <span class="code-string">&quot;2D Card Game: finished the Jörmungandr character spec draft&quot;</span>,
+  <span class="code-key">&quot;projects&quot;</span>: [<span class="code-string">&quot;2D Card Game&quot;</span>, <span class="code-string">&quot;3D RPG&quot;</span>, <span class="code-string">&quot;Open World&quot;</span>],
+  <span class="code-key">&quot;task_types&quot;</span>: [<span class="code-string">&quot;Spec&quot;</span>, <span class="code-string">&quot;Data config&quot;</span>, <span class="code-string">&quot;QA&quot;</span>],
+  <span class="code-key">&quot;date&quot;</span>: <span class="code-string">&quot;2026-06-19&quot;</span>
+}</code></pre></div></div><div class="build-group build-row"><div class="build-copy"><h3><span>03</span>Check each entry before it is saved</h3><p>Each piece of work comes back as its own entry, and the user confirms or corrects it before saving. Users can catch a wrong project or work type on the entry itself, before it reaches a report.</p></div><div class="build-evidence"><pre><code>{
+  <span class="code-key">&quot;name&quot;</span>: <span class="code-string">&quot;Jörmungandr character spec&quot;</span>,
+  <span class="code-key">&quot;project&quot;</span>: <span class="code-string">&quot;2D Card Game&quot;</span>,
+  <span class="code-key">&quot;task_type&quot;</span>: <span class="code-string">&quot;Spec&quot;</span>,
+  <span class="code-key">&quot;status&quot;</span>: <span class="code-string">&quot;Done&quot;</span>
+}
+<span class="code-comment">// saved to Records only after the user confirms</span></code></pre></div></div><div class="build-group build-row"><div class="build-copy"><h3><span>04</span>Write reports only from confirmed work</h3><p>Users choose which confirmed entries feed the report. The instructions tell the model to keep recorded quantities and avoid claims the entries don’t support, so the summary stays grounded in the work log.</p></div><div class="build-evidence"><pre><code><span class="code-comment">// report instructions, excerpt</span>
+<span class="code-key">&quot;daily_standup&quot;</span>:   <span class="code-string">&quot;Yesterday’s work and today’s plan.&quot;</span>
+<span class="code-key">&quot;progress_update&quot;</span>: <span class="code-string">&quot;Summarise by project over the selected period.&quot;</span>
+<span class="code-key">&quot;all_reports&quot;</span>:     <span class="code-string">&quot;Keep recorded quantities. No unsupported claims.&quot;</span></code></pre></div></div><div class="build-group build-row"><div class="build-copy"><h3><span>05</span>Use a consistent structure for review</h3><p>I defined one set of fields so every entry can be reviewed and corrected in the same interface. Lower-temperature parsing reduces variation and code-fence cleanup fixes a formatting issue, but users still check the content.</p></div><div class="build-evidence"><pre><code><span class="code-comment">// lower variation for parsing</span>
+parse: <span class="code-keyword">0.3</span>   report: <span class="code-keyword">0.7</span>
+<span class="code-comment">// remove Markdown fences, then parse</span>
+<span class="code-keyword">const</span> cleaned = responseText.replace(/```json|```/g, &#x27;&#x27;).trim()
+<span class="code-keyword">const</span> entries = JSON.parse(cleaned)</code></pre></div></div></div></section><section id="design-system"><div class="eyebrow">08 · Design system</div><h2>Interface colours and typography</h2><p>I developed the colours, typography and component styles while designing Capture, then applied this system across the remaining screens to keep the design consistent.</p><div class="ds-specification"><div class="ds-spec-row"><div class="ds-row-intro"><h3>Text</h3><p>Heading, body and secondary text colours.</p></div><div class="ds-swatches"><div class="ds-swatch" style="--swatch-tint:#e9e9eb"><span class="ds-colour" style="--swatch:#242334" aria-hidden="true"></span><div class="ds-swatch-label"><span class="ds-colour-name">Headings</span><code>#242334</code></div></div><div class="ds-swatch" style="--swatch-tint:#ececee"><span class="ds-colour" style="--swatch:#444658" aria-hidden="true"></span><div class="ds-swatch-label"><span class="ds-colour-name">Icons</span><code>#444658</code></div></div><div class="ds-swatch" style="--swatch-tint:#eff0f1"><span class="ds-colour" style="--swatch:#5F6473" aria-hidden="true"></span><div class="ds-swatch-label"><span class="ds-colour-name">Body text</span><code>#5F6473</code></div></div><div class="ds-swatch" style="--swatch-tint:#f2f2f3"><span class="ds-colour" style="--swatch:#7D7F89" aria-hidden="true"></span><div class="ds-swatch-label"><span class="ds-colour-name">Metadata</span><code>#7D7F89</code></div></div></div></div><div class="ds-spec-row"><div class="ds-row-intro"><h3>Accent and status</h3><p>Selection, confirmation and entries that need attention.</p></div><div class="ds-swatches"><div class="ds-swatch" style="--swatch-tint:#f2effc"><span class="ds-colour" style="--swatch:#7B60E3" aria-hidden="true"></span><div class="ds-swatch-label"><span class="ds-colour-name">Selected</span><code>#7B60E3</code></div></div><div class="ds-swatch" style="--swatch-tint:#f5f3fc"><span class="ds-colour" style="--swatch:#9983E3" aria-hidden="true"></span><div class="ds-swatch-label"><span class="ds-colour-name">Accent marks</span><code>#9983E3</code></div></div><div class="ds-swatch" style="--swatch-tint:#fcfcfe"><span class="ds-colour" style="--swatch:#E5DDF5" aria-hidden="true"></span><div class="ds-swatch-label"><span class="ds-colour-name">Chips</span><code>#E5DDF5</code></div></div><div class="ds-swatch" style="--swatch-tint:#e9f5ed"><span class="ds-colour" style="--swatch:#1F9A4C" aria-hidden="true"></span><div class="ds-swatch-label"><span class="ds-colour-name">Confirmed</span><code>#1F9A4C</code></div></div><div class="ds-swatch" style="--swatch-tint:#fef8ea"><span class="ds-colour" style="--swatch:#F2B630" aria-hidden="true"></span><div class="ds-swatch-label"><span class="ds-colour-name">To confirm</span><code>#F2B630</code></div></div></div></div><div class="ds-spec-row"><div class="ds-row-intro"><h3>Surfaces</h3><p>Backgrounds and borders used in the current screens.</p></div><div class="ds-swatches"><div class="ds-swatch" style="--swatch-tint:#ffffff"><span class="ds-colour ds-colour-white" style="--swatch:#FFFFFF" aria-hidden="true"></span><div class="ds-swatch-label"><span class="ds-colour-name">Cards</span><code>#FFFFFF</code></div></div><div class="ds-swatch" style="--swatch-tint:#fefdfe"><span class="ds-colour" style="--swatch:#F0ECF9" aria-hidden="true"></span><div class="ds-swatch-label"><span class="ds-colour-name">Tag fill</span><code>#F0ECF9</code></div></div><div class="ds-swatch" style="--swatch-tint:#fcfafe"><span class="ds-colour" style="--swatch:#DED2F3" aria-hidden="true"></span><div class="ds-swatch-label"><span class="ds-colour-name">Borders</span><code>#DED2F3</code></div></div><div class="ds-swatch" style="--swatch-tint:#fffeff"><span class="ds-colour" style="--swatch:#FBF9FF" aria-hidden="true"></span><div class="ds-swatch-label"><span class="ds-colour-name">Page canvas</span><code>#FBF9FF</code></div></div><div class="ds-swatch" style="--swatch-tint:#fdfcfe"><span class="ds-colour" style="--swatch:linear-gradient(120deg, #EAE4F9, #FBE6DB)" aria-hidden="true"></span><div class="ds-swatch-label"><span class="ds-colour-name">App background</span><code>#EAE4F9 → #FBE6DB</code></div></div></div></div><div class="ds-spec-row"><div class="ds-row-intro"><h3>Type scale</h3><p>Text examples from the product interface.</p></div><div class="ds-type-scale"><div class="ds-type-row"><span class="ds-type-sample" style="--type-size:32px;--type-weight:700">What did you work on today?</span><span class="ds-type-meta">32 / 700</span><span class="ds-type-role">Capture heading</span></div><div class="ds-type-row"><span class="ds-type-sample" style="--type-size:24px;--type-weight:700">Progress update</span><span class="ds-type-meta">24 / 700</span><span class="ds-type-role">Screen title</span></div><div class="ds-type-row"><span class="ds-type-sample" style="--type-size:20px;--type-weight:600">Today’s log</span><span class="ds-type-meta">20 / 600</span><span class="ds-type-role">Section</span></div><div class="ds-type-row"><span class="ds-type-sample" style="--type-size:16px;--type-weight:400">What did you work on today?</span><span class="ds-type-meta">16 / 400</span><span class="ds-type-role">Input field</span></div><div class="ds-type-row"><span class="ds-type-sample" style="--type-size:14px;--type-weight:600">Athena dialogue data</span><span class="ds-type-meta">14 / 600</span><span class="ds-type-role">Record title</span></div><div class="ds-type-row"><span class="ds-type-sample" style="--type-size:13px;--type-weight:400">Added the first 138 lines to the config table.</span><span class="ds-type-meta">13 / 400</span><span class="ds-type-role">Description</span></div><div class="ds-type-row"><span class="ds-type-sample" style="--type-size:12px;--type-weight:400">Data config · Confirmed · 10:12</span><span class="ds-type-meta">12 / 400</span><span class="ds-type-role">Tags, time, counts</span></div><div class="ds-type-row"><span class="ds-type-sample" style="--type-size:11px;--type-weight:400">WORKLOG · WORKSPACE</span><span class="ds-type-meta">11 / 400</span><span class="ds-type-role">Sidebar labels</span></div></div></div></div></section></article
+        ></div
+      ><div class="block"><a class="arrow" href="index.html#work">Back to selected work ↗</a></div
+      ><footer id="contact" class="footer"
+        ><div class="footer-row"
+          ><div class="footer-links"
+            ><a href="mailto:zoeyxiong.work@gmail.com">zoeyxiong.work@gmail.com</a
+            ><a
+              href="https://www.linkedin.com/in/zoey-xiong-49781a297/"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn</a
+            ><a href="https://github.com/zoeyxiong12" target="_blank" rel="noopener">GitHub</a
+            ><a
+              href="assets/Zoey-Xiong-Product-Designer-CV.pdf"
+              target="_blank"
+              rel="noopener"
+              >CV</a
+            ></div
+          ><span class="footer-credit">Designed and built by Zoey · 2026</span></div
+        ></footer
+      ></main
+    ><script src="assets/dusk-mascot-states.js?v=8"></script><script src="structure.js?v=nav-inspiration-4"></script
+    ><script src="interactions.js?v=step2-ring-18"></script><script src="assets/arrow-links.js?v=2"></script><script src="assets/dusk-report-scroll.js?v=3"></script></body></html>

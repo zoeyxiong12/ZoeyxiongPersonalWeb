@@ -1,0 +1,744 @@
+{
+  "environment": [
+    {
+      "id": 40,
+      "name": "source-040",
+      "caption": "Interior sketch",
+      "kind": "image",
+      "full": "source-040.jpg",
+      "width": 2400,
+      "height": 1721,
+      "source": "IMG_6425.jpg",
+      "recorded_date": "2021-10-27 02:17:42 +0000"
+    },
+    {
+      "id": 30,
+      "name": "source-030",
+      "caption": "Landscape copy study",
+      "kind": "image",
+      "full": "source-030.jpg",
+      "width": 2400,
+      "height": 1691,
+      "source": "IMG_4189.JPG",
+      "recorded_date": "2022-05-28 03:31:28 +0000"
+    },
+    {
+      "id": 23,
+      "name": "source-023",
+      "caption": "Graduate exhibition",
+      "kind": "image",
+      "full": "source-023.jpg",
+      "width": 1500,
+      "height": 2000,
+      "source": "IMG_3835.HEIC",
+      "recorded_date": "2023:05:17 18:39:35"
+    },
+    {
+      "id": 85,
+      "name": "source-085",
+      "caption": "Architectural model",
+      "kind": "image",
+      "full": "source-085.jpg",
+      "width": 2400,
+      "height": 1800,
+      "source": "IMG_1041.JPG",
+      "recorded_date": ""
+    }
+  ],
+  "bio": [
+    {
+      "id": 59,
+      "name": "source-059",
+      "caption": "Biological fabric",
+      "kind": "image",
+      "full": "source-059.jpg",
+      "width": 1500,
+      "height": 2000,
+      "source": "IMG_8830.JPG",
+      "recorded_date": "2022-12-02 05:13:59 +0000"
+    },
+    {
+      "id": 65,
+      "name": "source-065",
+      "caption": "Algae microscopy",
+      "kind": "image",
+      "full": "source-065.jpg",
+      "width": 2000,
+      "height": 1500,
+      "source": "IMG_9577.HEIC",
+      "recorded_date": "2022:12:27 16:22:51"
+    },
+    {
+      "id": 74,
+      "name": "source-074",
+      "caption": "Material experiments",
+      "kind": "image",
+      "full": "source-074.jpg",
+      "width": 1500,
+      "height": 2000,
+      "source": "IMG_9983.JPG",
+      "recorded_date": "2023-01-02 19:05:05 +0000"
+    },
+    {
+      "id": 78,
+      "name": "source-078",
+      "caption": "Algae structures",
+      "kind": "image",
+      "full": "source-078.jpg",
+      "width": 1728,
+      "height": 1072,
+      "source": "截屏2023-04-19 20.44.49.PNG",
+      "recorded_date": "2023-04-19 12:44:49 +0000"
+    },
+    {
+      "id": 79,
+      "name": "source-079",
+      "caption": "Product structure",
+      "kind": "image",
+      "full": "source-079.jpg",
+      "width": 1780,
+      "height": 1320,
+      "source": "截屏2023-04-19 21.45.02.PNG",
+      "recorded_date": "2023-04-19 13:45:03 +0000"
+    },
+    {
+      "id": 13,
+      "name": "source-013",
+      "caption": "Lab process",
+      "kind": "image",
+      "full": "source-013.jpg",
+      "width": 2000,
+      "height": 1500,
+      "source": "IMG_0737.heic",
+      "recorded_date": "2023:01:13 01:16:19"
+    },
+    {
+      "id": 11,
+      "name": "source-011",
+      "caption": "Installation detail",
+      "kind": "image",
+      "full": "source-011.jpg",
+      "width": 2000,
+      "height": 1500,
+      "source": "IMG_0529.HEIC",
+      "recorded_date": "2023:01:12 20:43:44"
+    },
+    {
+      "id": 83,
+      "name": "source-083",
+      "caption": "Emotion & cultivation",
+      "kind": "image",
+      "full": "source-083.jpg",
+      "width": 2400,
+      "height": 844,
+      "source": "截屏2026-10-27 10.07.17.png",
+      "recorded_date": "2026-10-27 10:07:17 +0000"
+    },
+    {
+      "id": 82,
+      "name": "source-082",
+      "caption": "Generative visuals",
+      "kind": "image",
+      "full": "source-082.jpg",
+      "width": 1038,
+      "height": 616,
+      "source": "截屏2026-10-27 10.07.05.png",
+      "recorded_date": "2026-10-27 10:07:06 +0000"
+    }
+  ],
+  "creative": [
+    {
+      "id": 29,
+      "name": "source-029",
+      "caption": "My school bag",
+      "kind": "image",
+      "full": "source-029.jpg",
+      "width": 1500,
+      "height": 2000,
+      "source": "IMG_4083.HEIC",
+      "recorded_date": "2023:11:29 21:13:32"
+    },
+    {
+      "id": 16,
+      "name": "source-016",
+      "caption": "Sourcing materials",
+      "kind": "image",
+      "full": "source-016.jpg",
+      "width": 1499,
+      "height": 2000,
+      "source": "IMG_0993.HEIC",
+      "recorded_date": "2023:11:21 16:33:20"
+    },
+    {
+      "id": 25,
+      "name": "source-025",
+      "caption": "Worker or artist?",
+      "kind": "video",
+      "full": "source-025.jpg",
+      "width": 406,
+      "height": 720,
+      "source": "IMG_3862.MOV",
+      "recorded_date": "2026-10-27T10:32:42.000000Z"
+    },
+    {
+      "id": 54,
+      "name": "source-054",
+      "caption": "Soldering",
+      "kind": "video",
+      "full": "source-054.jpg",
+      "width": 406,
+      "height": 720,
+      "source": "IMG_8767.MOV",
+      "recorded_date": "2023-10-13T15:25:30.000000Z"
+    },
+    {
+      "id": 89,
+      "name": "source-089",
+      "caption": "Laser cutting",
+      "kind": "image",
+      "full": "source-089.jpg",
+      "width": 1400,
+      "height": 1050,
+      "source": "IMG_1120.HEIC",
+      "recorded_date": ""
+    },
+    {
+      "id": 21,
+      "name": "source-021",
+      "caption": "Making parts",
+      "kind": "image",
+      "full": "source-021.jpg",
+      "width": 1500,
+      "height": 2000,
+      "source": "IMG_3529.HEIC",
+      "recorded_date": "2023:11:24 20:05:19"
+    },
+    {
+      "id": 27,
+      "name": "source-027",
+      "caption": "Components",
+      "kind": "image",
+      "full": "source-027.jpg",
+      "width": 1500,
+      "height": 2000,
+      "source": "IMG_3920.HEIC",
+      "recorded_date": "2023:11:28 18:27:43"
+    },
+    {
+      "id": 28,
+      "name": "source-028",
+      "caption": "Building the frame",
+      "kind": "image",
+      "full": "source-028.jpg",
+      "width": 1500,
+      "height": 2000,
+      "source": "IMG_3934.HEIC",
+      "recorded_date": "2023:11:28 19:08:55"
+    },
+    {
+      "id": 22,
+      "name": "source-022",
+      "caption": "Mechanism assembly",
+      "kind": "image",
+      "full": "source-022.jpg",
+      "width": 2000,
+      "height": 1500,
+      "source": "IMG_3824.HEIC",
+      "recorded_date": "2023:11:27 22:50:54"
+    },
+    {
+      "id": 32,
+      "name": "source-032",
+      "caption": "Kinetic detail",
+      "kind": "image",
+      "full": "source-032.jpg",
+      "width": 1500,
+      "height": 2000,
+      "source": "IMG_4409.HEIC",
+      "recorded_date": "2023:12:01 16:10:48"
+    },
+    {
+      "id": 17,
+      "name": "source-017",
+      "caption": "Electronic kaleidoscope",
+      "kind": "video",
+      "full": "source-017.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "IMG_1137.MOV",
+      "recorded_date": "2023-11-06T18:25:39.000000Z"
+    },
+    {
+      "id": 35,
+      "name": "source-035",
+      "caption": "Assembled installation",
+      "kind": "image",
+      "full": "source-035.jpg",
+      "width": 1140,
+      "height": 2000,
+      "source": "IMG_4943.jpg",
+      "recorded_date": "2023-12-07 06:06:29 +0000"
+    },
+    {
+      "id": 51,
+      "name": "source-051",
+      "caption": "Studio electronics",
+      "kind": "image",
+      "full": "source-051.jpg",
+      "width": 1500,
+      "height": 2000,
+      "source": "IMG_8380.HEIC",
+      "recorded_date": "2023:10:06 15:32:30"
+    },
+    {
+      "id": 52,
+      "name": "source-052",
+      "caption": "Building a circuit",
+      "kind": "video",
+      "full": "source-052.jpg",
+      "width": 540,
+      "height": 960,
+      "source": "IMG_8403.MOV",
+      "recorded_date": "2023-10-06T16:24:07.000000Z"
+    },
+    {
+      "id": 7,
+      "name": "source-007",
+      "caption": "Morse code circuit",
+      "kind": "video",
+      "full": "source-007.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "IMG_0157.MOV",
+      "recorded_date": "2023-10-26T17:12:02.000000Z"
+    },
+    {
+      "id": 8,
+      "name": "source-008",
+      "caption": "Motor demo",
+      "kind": "video",
+      "full": "source-008.jpg",
+      "width": 540,
+      "height": 960,
+      "source": "IMG_0186.MOV",
+      "recorded_date": "2023-10-27T15:58:59.000000Z"
+    },
+    {
+      "id": 26,
+      "name": "source-026",
+      "caption": "Game controller",
+      "kind": "video",
+      "full": "source-026.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "IMG_3866.MOV",
+      "recorded_date": "2024-03-10T16:28:18.000000Z"
+    },
+    {
+      "id": 104,
+      "name": "source-104",
+      "caption": "Classroom workshop",
+      "kind": "image",
+      "full": "source-104.jpg",
+      "width": 1500,
+      "height": 2000,
+      "source": "/Users/zoeyxiong/Downloads/IMG_1663.JPG",
+      "recorded_date": ""
+    },
+    {
+      "id": 76,
+      "name": "source-076",
+      "caption": "Live webcam visuals",
+      "kind": "video",
+      "full": "source-076.jpg",
+      "width": 1280,
+      "height": 804,
+      "source": "录屏2023-11-29 18.56.20.MOV",
+      "recorded_date": "2023-11-29T18:56:25.000000Z"
+    },
+    {
+      "id": 62,
+      "name": "source-062",
+      "caption": "Mapping ideas",
+      "kind": "image",
+      "full": "source-062.jpg",
+      "width": 1500,
+      "height": 2000,
+      "source": "IMG_9228.HEIC",
+      "recorded_date": "2023:10:18 12:44:59"
+    },
+    {
+      "id": 20,
+      "name": "source-020",
+      "caption": "Computing lecture",
+      "kind": "image",
+      "full": "source-020.jpg",
+      "width": 2000,
+      "height": 1757,
+      "source": "IMG_1777.heic",
+      "recorded_date": "2023:11:10 14:55:42"
+    },
+    {
+      "id": 39,
+      "name": "source-039",
+      "caption": "Sound-reactive visuals",
+      "kind": "image",
+      "full": "source-039.jpg",
+      "width": 1500,
+      "height": 2000,
+      "source": "IMG_6389.HEIC",
+      "recorded_date": "2024:02:08 16:42:18"
+    }
+  ],
+  "graduation": [
+    {
+      "id": 75,
+      "name": "source-075",
+      "caption": "Sign-language demo",
+      "kind": "video",
+      "full": "source-075.jpg",
+      "width": 1280,
+      "height": 714,
+      "source": "VID_20240617220251589.MOV",
+      "recorded_date": "2026-10-27T10:57:24.000000Z"
+    },
+    {
+      "id": 103,
+      "name": "source-103",
+      "caption": "Hand landmarks",
+      "kind": "image",
+      "full": "source-103.jpg",
+      "width": 542,
+      "height": 578,
+      "source": "截屏2026-10-27 13.51.28.png",
+      "recorded_date": ""
+    },
+    {
+      "id": 19,
+      "name": "source-019",
+      "caption": "My final exhibition",
+      "kind": "image",
+      "full": "source-019.jpg",
+      "width": 2000,
+      "height": 2000,
+      "source": "IMG_1746.jpg",
+      "recorded_date": "2024-12-15 22:19:27 +0000"
+    },
+    {
+      "id": 1,
+      "name": "source-001",
+      "caption": "Final project film",
+      "kind": "video",
+      "full": "source-001.jpg",
+      "width": 960,
+      "height": 540,
+      "source": "2867AE73-286C-4478-B83D-26A86C77EB5A.MOV",
+      "recorded_date": "2024-12-05T02:08:24.000000Z"
+    },
+    {
+      "id": 10,
+      "name": "source-010",
+      "caption": "Coding the tool",
+      "kind": "image",
+      "full": "source-010.jpg",
+      "width": 1500,
+      "height": 2000,
+      "source": "IMG_0317.HEIC",
+      "recorded_date": "2024:12:01 10:30:23"
+    },
+    {
+      "id": 94,
+      "name": "source-094",
+      "caption": "Sketch-to-image results",
+      "kind": "image",
+      "full": "source-094.jpg",
+      "width": 956,
+      "height": 1400,
+      "source": "截屏2026-10-27 12.55.37.png",
+      "recorded_date": ""
+    },
+    {
+      "id": 6,
+      "name": "source-006",
+      "caption": "Filming the project",
+      "kind": "image",
+      "full": "source-006.jpg",
+      "width": 2000,
+      "height": 2000,
+      "source": "IMG_0146.heic",
+      "recorded_date": "2024:11:28 12:30:09"
+    },
+    {
+      "id": 18,
+      "name": "source-018",
+      "caption": "Exhibition snapshots",
+      "kind": "image",
+      "full": "source-018.jpg",
+      "width": 1499,
+      "height": 2000,
+      "source": "IMG_1442.HEIC",
+      "recorded_date": "2024-12-14 01:14:25 +0000"
+    }
+  ],
+  "internship": [
+    {
+      "id": 93,
+      "name": "source-093",
+      "caption": "BIMA Growth Stories",
+      "kind": "image",
+      "full": "source-093.jpg",
+      "width": 1500,
+      "height": 2000,
+      "source": "IMG_0300.HEIC",
+      "recorded_date": ""
+    },
+    {
+      "id": 90,
+      "name": "source-090",
+      "caption": "BIMA with my manager",
+      "kind": "image",
+      "full": "source-090.jpg",
+      "width": 1500,
+      "height": 2000,
+      "source": "IMG_0293.HEIC",
+      "recorded_date": ""
+    }
+  ],
+  "graduating": [
+    {
+      "id": 91,
+      "name": "source-091",
+      "caption": "Graduating from UAL",
+      "kind": "image",
+      "full": "source-091.jpg",
+      "width": 1500,
+      "height": 2000,
+      "source": "IMG_7053.JPG",
+      "recorded_date": ""
+    },
+    {
+      "id": 102,
+      "name": "source-102",
+      "caption": "Celebrating graduation",
+      "kind": "image",
+      "full": "source-102.jpg",
+      "width": 1350,
+      "height": 1800,
+      "source": "IMG_2966.JPG",
+      "recorded_date": ""
+    },
+    {
+      "id": 100,
+      "name": "source-100",
+      "caption": "Graduation portrait",
+      "kind": "image",
+      "full": "source-100.jpg",
+      "width": 1130,
+      "height": 1800,
+      "source": "IMG_3071.JPG",
+      "recorded_date": ""
+    },
+    {
+      "id": 99,
+      "name": "source-099",
+      "caption": "Graduation ceremony",
+      "kind": "image",
+      "full": "source-099.jpg",
+      "width": 1800,
+      "height": 1350,
+      "source": "IMG_2431.HEIC",
+      "recorded_date": ""
+    }
+  ],
+  "outside": [
+    {
+      "id": 92,
+      "name": "source-092",
+      "caption": "Piano evenings in London",
+      "kind": "image",
+      "full": "source-092.jpg",
+      "width": 1500,
+      "height": 2000,
+      "source": "IMG_0760.HEIC",
+      "recorded_date": ""
+    },
+    {
+      "id": 61,
+      "name": "source-061",
+      "caption": "University days",
+      "kind": "image",
+      "full": "source-061.jpg",
+      "width": 2400,
+      "height": 1600,
+      "source": "IMG_8921.JPG",
+      "recorded_date": "2021-12-15 10:35:14 +0000"
+    },
+    {
+      "id": 106,
+      "name": "source-106",
+      "caption": "Pull-ups",
+      "kind": "video",
+      "full": "source-106.mp4",
+      "width": 540,
+      "height": 960,
+      "source": "7cb2b293f18232917dc701ed7d1cd999_WC-EditVideo_1.MP4",
+      "recorded_date": ""
+    },
+    {
+      "id": 110,
+      "name": "source-110",
+      "caption": "Ever climbed in a castle?",
+      "kind": "image",
+      "full": "source-110.jpg",
+      "width": 1500,
+      "height": 2000,
+      "source": "IMG_4016.HEIC",
+      "recorded_date": ""
+    },
+    {
+      "id": 111,
+      "name": "source-111",
+      "caption": "Bouldering",
+      "kind": "video",
+      "full": "source-111.mp4",
+      "width": 540,
+      "height": 960,
+      "source": "IMG_4365.MOV",
+      "recorded_date": ""
+    },
+    {
+      "id": 113,
+      "name": "source-113",
+      "caption": "Top-rope climbing",
+      "kind": "image",
+      "full": "source-113.jpg",
+      "width": 1179,
+      "height": 1475,
+      "source": "IMG_4492.jpg",
+      "recorded_date": ""
+    },
+    {
+      "id": 115,
+      "name": "source-115",
+      "caption": "Archery",
+      "kind": "image",
+      "full": "source-115.jpg",
+      "width": 1179,
+      "height": 1637,
+      "source": "IMG_4494.jpg",
+      "recorded_date": ""
+    },
+    {
+      "id": 117,
+      "name": "source-117",
+      "caption": "Paragliding",
+      "kind": "image",
+      "full": "source-117.jpg",
+      "width": 1179,
+      "height": 1441,
+      "source": "IMG_4496.jpg",
+      "recorded_date": ""
+    },
+    {
+      "id": 119,
+      "name": "source-119",
+      "caption": "A day out",
+      "kind": "image",
+      "full": "source-119.jpg",
+      "width": 1179,
+      "height": 1460,
+      "source": "IMG_4498.jpg",
+      "recorded_date": ""
+    },
+    {
+      "id": 121,
+      "name": "source-121",
+      "caption": "Dancing",
+      "kind": "video",
+      "full": "source-121.mp4",
+      "width": 960,
+      "height": 720,
+      "source": "MTVideo.MOV",
+      "recorded_date": ""
+    },
+    {
+      "id": 122,
+      "name": "source-122",
+      "caption": "First exhibition curation · Covent Garden, London",
+      "kind": "image",
+      "full": "source-122.jpg",
+      "width": 1148,
+      "height": 1541,
+      "source": "/Users/zoeyxiong/Downloads/IMG_4481.jpg",
+      "recorded_date": ""
+    },
+    {
+      "id": 118,
+      "name": "source-118",
+      "caption": "At the gallery",
+      "kind": "image",
+      "full": "source-118.jpg",
+      "width": 1179,
+      "height": 1487,
+      "source": "IMG_4497.jpg",
+      "recorded_date": ""
+    },
+    {
+      "id": 124,
+      "name": "source-124",
+      "caption": "At the gallery",
+      "kind": "image",
+      "full": "source-124.jpg",
+      "width": 1500,
+      "height": 2000,
+      "source": "IMG_2694.JPG",
+      "recorded_date": ""
+    },
+    {
+      "id": 127,
+      "name": "source-127",
+      "caption": "Gallery visit",
+      "kind": "image",
+      "full": "source-127.jpg",
+      "width": 1179,
+      "height": 1603,
+      "source": "IMG_4484.jpg",
+      "recorded_date": ""
+    },
+    {
+      "id": 132,
+      "name": "source-132",
+      "caption": "Yoko Ono exhibition",
+      "kind": "image",
+      "full": "source-132.jpg",
+      "width": 1500,
+      "height": 2000,
+      "source": "IMG_8668.HEIC",
+      "recorded_date": ""
+    },
+    {
+      "id": 133,
+      "name": "source-133",
+      "caption": "Performance art",
+      "kind": "image",
+      "full": "source-133.jpg",
+      "width": 1500,
+      "height": 2000,
+      "source": "IMG_9580.HEIC",
+      "recorded_date": ""
+    }
+  ],
+  "work": [
+    {
+      "id": 105,
+      "name": "source-105",
+      "caption": "View from work",
+      "kind": "image",
+      "full": "source-105.jpg",
+      "width": 1500,
+      "height": 2000,
+      "source": "IMG_9956.HEIC",
+      "recorded_date": ""
+    }
+  ]
+}

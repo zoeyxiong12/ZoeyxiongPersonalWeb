@@ -1,0 +1,191 @@
+/* About shares the main site's wrap dimensions. All media stays at its original ratio. */
+.about-page{--about-ink:#292d33;--about-muted:#737b85;--about-rule:#e4e7e9;--about-accent:#df7922;background:#fff;color:var(--about-ink)}
+.about-intro{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,.8fr);gap:clamp(40px,7vw,120px);align-items:center;padding:78px 0 75px}.about-intro h1{font-size:clamp(54px,6vw,86px);font-weight:500;line-height:1.08;letter-spacing:-3.5px;margin:22px 0 24px}.about-intro .about-intro-lead{font-size:clamp(26px,2.6vw,38px);line-height:1.4;letter-spacing:-.8px;max-width:none;margin:0 0 24px;color:var(--about-ink)}.about-intro-lead em{font-family:"Times New Roman",serif;font-weight:400;color:#f46b51}.about-intro .about-intro-detail{font-size:18px;line-height:1.8;color:#69717b;max-width:none;margin:0}.about-portrait{margin:0;max-width:390px;width:100%;justify-self:end}.about-portrait img{display:block;width:100%;height:auto;border-radius:8px}
+.experience-layout{display:grid;grid-template-columns:210px minmax(0,1fr);gap:64px;align-items:start;padding-top:48px;border-top:1px solid var(--about-rule)}.experience-toc{position:sticky;top:115px;align-self:start;padding-top:0;font-size:13px}.experience-toc>.eyebrow{margin-bottom:22px}.toc-period{margin-bottom:25px}.experience-toc a{display:block;color:#727b86;line-height:1.5;padding:5px 10px;margin-left:-10px;border-radius:6px;transition:background .2s,color .2s}.experience-toc a:hover{color:#333b43;background:#fff7ef}.experience-toc a[aria-current]{color:#292d33;background:#fff0e3}.experience-toc .toc-main{font-size:14px;font-weight:500}.experience-toc a span{display:block;font-size:11px;font-weight:400;color:#858d96;margin-top:3px}.experience-toc small{display:block;font-size:11px;font-weight:400;color:#858d96;margin-top:2px}.toc-children{margin:12px 0 0 2px;padding-left:15px;border-left:1px solid #f2dfce}.toc-children a{font-size:12px;margin-bottom:7px}.toc-children a span{font-size:10px}.experience-toc .toc-next{font-size:13px}
+.experience-journal{min-width:0}.experience-chapter{padding:0 0 52px;margin-bottom:45px;border-bottom:1px solid var(--about-rule);scroll-margin-top:115px}.about-page .chapter-header{position:static;background:none;border:0;z-index:auto;margin:0}.chapter-header>.eyebrow{margin-bottom:12px}.experience-journal h2{font-size:clamp(29px,2.6vw,38px);line-height:1.2;font-weight:500;letter-spacing:-1.1px;margin:0 0 16px}.experience-meta{display:flex;gap:8px 24px;flex-wrap:wrap;font-size:12px;line-height:1.6;color:#838b93;margin-bottom:20px}.experience-journal p{font-size:16px;line-height:1.75;color:#69717b;max-width:none;margin:0 0 24px}.journal-strip{--media-height:clamp(190px,17vw,250px);display:flex;gap:20px 14px;align-items:start;flex-wrap:wrap;margin:0;min-width:0}.journal-figure{margin:0;flex:0 0 auto;width:calc(var(--media-height) * var(--media-ratio));max-width:100%;min-width:0}.journal-photo{display:block;width:100%;background:none;cursor:zoom-in;border:0;border-radius:4px}.journal-photo img,.journal-video{display:block;width:100%;height:auto;aspect-ratio:var(--media-ratio);border-radius:4px;background:none;object-fit:contain}.journal-photo img{transition:filter .2s}.journal-photo:hover img,.journal-photo:focus-visible img{filter:brightness(.96)}.journal-video{max-height:var(--media-height)}.journal-figure figcaption{font-size:10px;line-height:1.5;color:#7e858e;margin:7px 0 0;overflow-wrap:anywhere}.nested-experience{position:relative;margin-top:38px;padding-left:22px;border-left:1px solid #f2dfce;scroll-margin-top:115px}.nested-label{font-size:11px;color:#be5d12;line-height:1.6;margin:0 0 10px}.experience-journal h3{font-size:24px;line-height:1.3;font-weight:500;letter-spacing:-.6px;margin:0 0 12px}.nested-experience p{font-size:15px;max-width:none;margin-bottom:20px}.text-experience{padding-top:0;padding-bottom:0}.text-experience p{margin-bottom:0}.work-chapter{padding-bottom:40px;margin-bottom:35px}.work-chapter p{margin-bottom:16px}.about-text-link{display:inline-block;font-size:14px;line-height:1.6;color:#be5d12;border-bottom:1px solid #ffcba8;padding-bottom:3px}.next-chapter{scroll-margin-top:115px;margin-bottom:45px}.next-chapter h2{font-family:"Times New Roman",serif;font-style:italic;font-size:38px;font-weight:400;color:#be5d12;margin-bottom:16px}.outside-note{display:flex;justify-content:space-between;align-items:center;gap:30px;border-top:1px solid var(--about-rule);padding-top:28px}.outside-note h2{font-size:24px;margin-bottom:12px}.outside-note p{font-size:15px;margin:0}.outside-note .journal-strip{--media-height:110px}.outside-note .journal-figure figcaption{display:none}.about-page .footer{margin-top:65px}
+.photo-dialog{border:0;background:#fff;border-radius:8px;padding:24px;width:min(1100px,94vw);max-width:94vw;max-height:94dvh;color:#292d33}.photo-dialog::backdrop{background:#16191de0}.photo-viewer{display:grid;grid-template-columns:38px minmax(0,1fr) 38px;gap:16px;align-items:center}.photo-viewer figure{margin:30px 0 0;text-align:center;min-width:0}.photo-viewer .album-image{width:100%;max-height:72dvh;object-fit:contain}.photo-viewer figcaption{font-size:13px;margin-top:12px;color:#626a75}.photo-viewer button{cursor:pointer;border:0;background:#fff0e3;color:#292d33;border-radius:50%;width:38px;height:38px;font-size:20px}.photo-viewer .photo-close{position:absolute;top:12px;right:18px;width:auto;height:auto;padding:5px 12px;border-radius:20px;font-size:13px}.photo-prev:disabled,.photo-next:disabled{opacity:.35;cursor:default}.about-page button:focus-visible{outline:2px solid #ff851b;outline-offset:4px}
+@media(min-width:1800px){.experience-layout{grid-template-columns:220px minmax(0,1fr);gap:70px}.journal-strip{--media-height:250px}}
+@media(max-width:1100px){.experience-layout{grid-template-columns:180px minmax(0,1fr);gap:32px}.experience-toc{top:105px}.about-intro{gap:42px}.about-intro h1{font-size:60px}.about-intro .about-intro-lead{font-size:30px}.about-intro .about-intro-detail{font-size:16px}.nested-experience{padding-left:16px}}
+@media(max-width:900px){.experience-layout{grid-template-columns:minmax(0,1fr);gap:30px;padding-top:25px}.experience-toc{position:static;display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;border-bottom:1px solid var(--about-rule);padding:0 0 20px}.experience-toc>.eyebrow{width:100%;margin-bottom:0}.toc-period{flex:1;min-width:150px;margin:0}.experience-toc .toc-next{align-self:start;white-space:nowrap}.toc-children{margin-top:9px}.experience-chapter{scroll-margin-top:105px}.about-intro{padding:50px 0;gap:35px}.about-intro h1{font-size:52px}.about-intro .about-intro-lead{font-size:27px}.about-intro .about-intro-detail{font-size:16px}.journal-strip{--media-height:190px}.about-portrait{max-width:290px}}
+@media(max-width:600px){.about-intro{grid-template-columns:minmax(0,1fr);gap:30px;padding:40px 0}.about-intro h1{font-size:52px;letter-spacing:-2.5px;margin:16px 0 22px}.about-intro .about-intro-lead{font-size:29px;line-height:1.4}.about-intro .about-intro-detail{font-size:16px}.about-portrait{width:78%;max-width:310px;justify-self:start}.experience-toc{gap:18px 22px}.toc-period{min-width:130px}.experience-toc .toc-main{font-size:13px}.experience-meta{font-size:11px;gap:5px 16px;margin-bottom:16px}.experience-journal h2{font-size:29px}.experience-journal h3{font-size:23px}.experience-journal p{font-size:15px;margin-bottom:20px}.journal-strip{--media-height:160px;gap:17px 10px}.journal-figure figcaption{font-size:9px}.nested-experience{margin-top:30px;padding-left:14px}.experience-chapter{padding-bottom:35px;margin-bottom:35px}.outside-note{gap:15px}.outside-note h2{font-size:22px}.outside-note p{font-size:14px}.outside-note .journal-strip{--media-height:100px}.next-chapter h2{font-size:32px}.photo-dialog{padding:15px}.photo-viewer{gap:7px;grid-template-columns:28px minmax(0,1fr) 28px}.photo-viewer button{width:28px;height:32px}}
+@media(prefers-reduced-motion:reduce){.journal-photo img,.experience-toc a{transition:none}}
+
+/* Full source album for review: larger media, no hidden items or editorial cuts. */
+.experience-journal p{width:100%;max-width:none}
+.outside-note{display:block}.outside-note .journal-strip{--media-height:200px;margin-top:24px}.outside-note .journal-figure figcaption{display:block}
+.journal-figure figcaption{font-size:11px}.journal-strip{gap:24px 16px}
+@media(max-width:600px){.outside-note .journal-strip{--media-height:160px}.journal-figure figcaption{font-size:10px}}
+.company-link{color:#be5d12;text-decoration:underline;text-underline-offset:3px}
+/* Keep related work together; crop only the three images requested by Zoey. */
+.media-collection+.media-collection{margin-top:28px}
+.experience-journal .media-collection h4{margin:0 0 13px;font-size:11px;line-height:1.5;letter-spacing:.9px;text-transform:uppercase;font-weight:500;color:#be5d12}
+.journal-photo.media-window{position:relative;overflow:hidden;aspect-ratio:var(--media-ratio)}
+.journal-photo.media-window img{position:absolute;left:var(--crop-left);top:var(--crop-top);width:var(--crop-width);height:var(--crop-height);max-width:none;aspect-ratio:auto;object-fit:fill}
+.graduation-section .journal-strip{--media-height:280px}
+.outside-note .media-collection+.media-collection{margin-top:28px}
+@media(max-width:600px){.graduation-section .journal-strip{--media-height:210px}}
+/* Fit the requested rows to the available width without clipping media. */
+.fitted-row>.journal-figure{width:calc(var(--row-height,var(--media-height)) * var(--media-ratio))}
+.fitted-row .journal-video{max-height:var(--row-height,var(--media-height))}
+.media-collection>.journal-strip+.journal-strip{margin-top:22px}
+@media(min-width:901px){.fitted-row{flex-wrap:nowrap}}
+@media(max-width:900px){.fitted-row{--row-height:var(--media-height)!important}}
+/* Give the structural drawing and CAD image room to breathe. */
+#undergrad > .journal-collections > .media-collection > .journal-strip:first-child{column-gap:28px}
+/* Separate the internship narrative from its event photographs. */
+.experience-journal #internship > p{margin-bottom:26px}
+#internship > .journal-collections{padding-top:4px}
+/* Trim only the left edge of the studio video; keep the person and computer visible. */
+.journal-figure[data-source-id="26"] .journal-video{object-fit:cover;object-position:right center}
+
+
+.intro-disciplines{white-space:nowrap}
+.installation-film-link{margin:18px 0 26px}
+.installation-film-link+.media-collection{margin-top:0}
+
+/* Match the tighter rhythm of the project pages. */
+.about-intro .about-intro-detail,.experience-journal p,.nested-experience p{line-height:1.6}
+.journal-figure figcaption{line-height:1.35}
+.journal-figure .installation-film-link{display:table;font-size:11px;line-height:1.35;margin:7px 0 0;padding-bottom:2px}
+
+/* Use the same warm accent as the homepage. */
+.about-intro-lead em{background:linear-gradient(100deg,#f46b51 0%,#ff922e 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+/* Align narrative widths independently of the full-width photo rows. */
+.about-intro{align-items:start}
+.about-portrait{align-self:start}
+.about-intro .about-intro-detail,.experience-journal p,.nested-experience p{width:100%;max-width:760px}
+.experience-journal .media-collection h4,.nested-label{color:#7e858e}
+.installation-film-action{display:flex;justify-content:flex-end;margin:12px 0 28px}
+.installation-film-action .installation-film-link{white-space:nowrap;margin:0;font-size:13px;color:#69717b;border-color:#aeb4ba}
+.installation-film-action+.media-collection{margin-top:0}
+.work-photo-strip{margin-top:24px;--media-height:280px}
+@media(max-width:900px){.about-intro .about-intro-detail,.experience-journal p,.nested-experience p{max-width:100%}}
+.about-page .experience-journal .experience-chapter > p{max-width:760px}
+.about-page .experience-journal .nested-experience > p{max-width:calc(760px - 23px)}
+@media(max-width:1100px){.about-page .experience-journal .nested-experience > p{max-width:calc(760px - 17px)}}
+@media(max-width:900px){.about-page .experience-journal .experience-chapter > p,.about-page .experience-journal .nested-experience > p{max-width:100%}}
+
+/* Chapter introductions span the same content width as their photo galleries. */
+.about-page .experience-journal .experience-chapter > p,.about-page .experience-journal .nested-experience > p{width:100%;max-width:none}
+/* A single-image viewer: white card, image, caption and a quiet close control. */
+.photo-viewer{display:block;padding:20px 0 0}
+.photo-viewer figure{margin:12px 0 0}
+.photo-viewer .photo-close{position:absolute;top:10px;right:12px;padding:0;width:28px;height:28px;border:0;border-radius:0;background:transparent;color:#4a4f55;font-size:27px;line-height:1}
+.photo-viewer .album-image{display:block;max-height:76dvh}
+#graduation .journal-figure figcaption{display:none}
+@media(min-width:901px){.journal-figure figcaption{white-space:nowrap;font-size:10px}}
+
+/* Native dialogs sit above the document cursor; use the system pointer while open. */
+html.custom-cursor .photo-dialog,html.custom-cursor .photo-dialog *,body.photo-modal-open,body.photo-modal-open *{cursor:auto!important}
+body.photo-modal-open .interaction-cursor{display:none!important}
+.photo-dialog .photo-close{cursor:pointer!important;z-index:2;pointer-events:auto}
+.outside-wall{--media-height:220px;gap:24px 16px}
+.outside-wall .journal-figure figcaption{white-space:normal}
+.outside-note .outside-wall+.outside-wall{margin-top:26px}
+
+/* Compact continuous hobby wall: more photographs fit across each row. */
+.outside-note .outside-wall{--media-height:clamp(150px,11vw,190px);gap:20px 14px;margin-top:22px}
+.outside-note .outside-wall .journal-video{max-height:var(--media-height)}
+
+/* Quieter introduction and neutral closing links. */
+.about-page .about-intro h1{font-size:clamp(40px,4vw,60px);letter-spacing:-2px;line-height:1.12}
+.about-page .next-chapter h2{color:#737b85}
+.about-page .about-text-link{color:#69717b;border-bottom-color:#b7bdc3}
+.about-page .about-text-link:hover{color:#333b43;border-bottom-color:#737b85}
+
+/* Rebalance the shorter introduction after removing the repeated lead. */
+.about-page .about-intro{grid-template-columns:minmax(0,1fr) clamp(220px,20vw,300px);gap:clamp(32px,4vw,64px);align-items:center;padding:52px 0 48px}
+.about-page .about-intro .about-intro-detail{width:100%;max-width:none}
+.about-page .about-portrait{width:100%;max-width:300px;align-self:center}
+.about-page .about-intro h1{margin:18px 0 24px}
+@media(max-width:700px){.about-page .about-intro{grid-template-columns:minmax(0,1fr);gap:26px;padding:36px 0}.about-page .about-portrait{width:70%;max-width:260px;justify-self:start}}
+
+/* Give the gallery portrait and introduction balanced visual weight. */
+.about-page .about-intro{grid-template-columns:minmax(0,1fr) clamp(280px,28vw,380px);gap:clamp(40px,6vw,88px);align-items:center;padding:56px 0}
+.about-page .about-portrait{width:100%;max-width:380px;align-self:center}
+.about-page .about-intro .about-intro-detail{max-width:none;line-height:1.8}
+@media(max-width:900px){.about-page .about-intro{grid-template-columns:minmax(0,1fr) 260px;gap:32px}}
+@media(max-width:700px){.about-page .about-intro{grid-template-columns:minmax(0,1fr);gap:28px;padding:36px 0}.about-page .about-portrait{width:80%;max-width:320px;justify-self:start}}
+
+/* Keep the short biography readable on wide screens. */
+.about-page .about-intro .about-intro-detail{max-width:62ch;text-wrap:pretty}
+
+/* Keep the portrait close to the readable biography instead of the viewport edge. */
+.about-page .about-intro{grid-template-columns:minmax(0,62ch) clamp(280px,28vw,380px);justify-content:center;column-gap:clamp(40px,5vw,72px)}
+
+.about-page .about-portrait img{filter:brightness(1.09) saturate(1.04)}
+@media(max-width:900px){.about-page .about-intro{grid-template-columns:minmax(0,1fr) 260px;column-gap:32px}}
+@media(max-width:700px){.about-page .about-intro{grid-template-columns:minmax(0,1fr);gap:28px}}
+
+/* Keep the accepted full-screen introduction with ordinary scrolling. */
+.about-page .about-intro{min-height:calc(100svh - var(--about-nav-height,80px));box-sizing:border-box}
+
+/* Work responsibilities read as short editorial sections, without cards. */
+.about-page .work-responsibilities{margin:28px 0 22px;display:grid;gap:22px}
+.about-page .work-responsibility h3{font-size:15px;font-weight:500;line-height:1.5;letter-spacing:0;color:#69717b;margin:0 0 7px}
+.about-page .work-responsibility p{margin:0;max-width:none}
+
+/* Work: one photograph beside a concise account of the role. */
+.about-page .work-overview{display:grid;grid-template-columns:minmax(220px,.85fr) minmax(0,1.35fr);gap:clamp(28px,4vw,52px);align-items:start;margin-top:26px}
+.about-page .work-overview .work-photo-strip{margin:0}
+.about-page .work-overview .journal-figure{width:100%;max-width:none}
+.about-page .work-copy>p{margin:0 0 20px}
+.about-page .work-copy .work-responsibilities{margin:0 0 20px;gap:20px}
+.about-page .work-copy .work-responsibility p{font-size:15px;line-height:1.65;margin:0}
+@media(max-width:700px){.about-page .work-overview{grid-template-columns:minmax(0,1fr);gap:28px}.about-page .work-overview .work-photo-strip{max-width:360px}}
+
+/* Lift the portrait gently and keep the work snapshot secondary to the text. */
+.about-page .about-portrait img{filter:brightness(1.16) saturate(1.04)}
+.about-page .work-overview{grid-template-columns:clamp(180px,18vw,240px) minmax(0,1fr);gap:clamp(28px,4vw,48px)}
+@media(max-width:700px){.about-page .work-overview{grid-template-columns:minmax(0,1fr);gap:24px}.about-page .work-overview .work-photo-strip{max-width:220px}}
+
+/* Credit belongs to the installation, beside its project film. */
+.installation-film-action{align-items:baseline;flex-wrap:wrap;gap:8px 20px}
+.installation-credit{font-size:12px;line-height:1.6;color:#7e858e}
+
+.about-page .installation-film-action .installation-credit,.about-page .installation-film-action .installation-film-link{font-size:13px;line-height:1.6;font-weight:400;color:#737b85}
+
+.about-page .installation-film-action{flex-direction:column;align-items:flex-end;gap:6px}
+
+/* Narrative work copy and a clearer hierarchy for the closing invitation. */
+.about-page .work-copy>p{margin:0 0 18px;line-height:1.75}
+.about-page .next-chapter h2{color:#292d33}
+.about-page .next-chapter .about-text-link{color:#4d555e}
+.about-page .outside-note h2{color:#737b85}
+
+/* A secondary page link after the About narrative. */
+.about-page .inspiration-teaser{padding-top:28px}
+.about-page .inspiration-teaser>.arrow{margin-top:0}
+
+/* Give the outside-work destination a visible heading and a separate link. */
+.about-page .inspiration-teaser>h2{font-size:clamp(29px,2.6vw,38px);line-height:1.2;font-weight:500;letter-spacing:-1.1px;color:#737b85;margin:0 0 18px}
+.about-page .inspiration-teaser>.arrow{margin-top:0}
+
+/* The next chapter concludes the story; outside work is a separate destination. */
+.about-page .experience-journal>#next{display:block;margin:0 0 48px;padding:0;border:0;background:none}
+.about-page .experience-journal>#next>h2{font-family:inherit;font-style:normal;font-size:clamp(29px,2.6vw,38px);line-height:1.2;font-weight:500;letter-spacing:-1.1px;color:#292d33;margin:0 0 16px}
+.about-page .experience-journal>#outside-work{display:block;margin:0;padding:36px 0 0;border:0;border-top:1px solid var(--about-rule,#e3e6ea);background:none}
+.about-page .experience-journal>#outside-work>h2{font-family:inherit;font-style:normal;font-size:28px;line-height:1.25;font-weight:500;letter-spacing:-.6px;color:#737b85;margin:0 0 18px}
+.about-page .experience-journal>#outside-work>.arrow{margin-top:0}
+@media(max-width:600px){.about-page .experience-journal>#next{margin-bottom:36px}.about-page .experience-journal>#outside-work{padding-top:28px}.about-page .experience-journal>#outside-work>h2{font-size:26px}}
+
+/* A short personal invitation, grouped closely with its page link. */
+.about-page .experience-journal>#outside-work{padding-top:28px}
+.about-page .experience-journal>#outside-work>.outside-invitation{font-family:inherit;font-size:16px;font-weight:400;line-height:1.7;letter-spacing:0;color:#69717b;max-width:650px;margin:0 0 8px}
+.about-page .experience-journal>#outside-work>.arrow{font-size:14px;line-height:1.6;margin:0;padding-bottom:4px}
+
+/* The two closing actions share one link treatment. */
+.about-page .experience-journal>#next>.about-text-link,
+.about-page .experience-journal>#outside-work>.arrow{display:inline-block;font-family:inherit;font-size:14px;font-weight:400;line-height:1.6;letter-spacing:0;color:#4d555e;border-bottom:1px solid #aeb6bf;padding:0 0 4px;margin:0;transition:color .16s ease,border-color .16s ease}
+.about-page .experience-journal>#next>.about-text-link:hover,
+.about-page .experience-journal>#outside-work>.arrow:hover{color:#292d33;border-bottom-color:#60758c}
+
+/* Keep the invitation's footprint after removing its introductory sentence. */
+.about-page .experience-journal>#outside-work{padding:46px 0 17px;min-height:90px}
+
+/* Work photo alignment and clearer stage headings. */
+.about-page #work-experience .work-overview .work-photo-strip{align-self:center}
+.about-page #work-experience .work-responsibility h3{color:#69717b;font-weight:500;margin-bottom:3px}
+
+/* More separation between current work and education. */
+.about-page #work-experience{padding-bottom:56px;margin-bottom:56px}

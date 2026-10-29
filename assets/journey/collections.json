@@ -1,0 +1,130 @@
+{
+  "environment": [
+    [
+      "",
+      [
+        40,
+        30,
+        23,
+        85
+      ]
+    ]
+  ],
+  "bio": [
+    [
+      "Materials, structures & experiments",
+      [
+        59,
+        65,
+        74,
+        78,
+        79,
+        13,
+        11,
+        83,
+        82
+      ]
+    ]
+  ],
+  "creative": [
+    [
+      "Workshop & fabrication",
+      [
+        29,
+        16,
+        25,
+        54,
+        89,
+        21,
+        27,
+        28,
+        22,
+        32,
+        17,
+        35
+      ]
+    ],
+    [
+      "Physical computing",
+      [
+        51,
+        52,
+        7,
+        8,
+        26
+      ]
+    ],
+    [
+      "Computer vision & classroom",
+      [
+        104,
+        76,
+        62,
+        20,
+        39
+      ]
+    ]
+  ],
+  "graduation": [
+    [
+      "AI gallery",
+      [
+        75,
+        103,
+        19,
+        1,
+        10,
+        94,
+        6,
+        18
+      ]
+    ]
+  ],
+  "internship": [
+    [
+      "BIMA event",
+      [
+        93,
+        90
+      ]
+    ]
+  ],
+  "graduating": [
+    [
+      "Graduation selection",
+      [
+        91,
+        102,
+        100,
+        99
+      ]
+    ]
+  ],
+  "outside": [
+    [
+      "Piano",
+      [
+        9,
+        92
+      ]
+    ],
+    [
+      "Dance",
+      [
+        53,
+        55,
+        56,
+        57,
+        58
+      ]
+    ],
+    [
+      "Personal snapshots",
+      [
+        47,
+        61,
+        80
+      ]
+    ]
+  ]
+}
