@@ -1,21 +1,34 @@
-document.querySelectorAll('#report-walkthrough, #work-history-walkthrough').forEach(root=>{
- const panels=[...root.querySelectorAll('.report-view-panel')];if(panels.length!==2)return;
- const labels=panels.map(p=>p.querySelector('h4').textContent);
- const story=document.createElement('div');story.className='report-scroll-story';
- const stage=document.createElement('div');stage.className='report-scroll-stage';
- panels[0].before(story);story.append(stage);panels.forEach(p=>stage.append(p));
- const controls=document.createElement('div');controls.className='report-stack-controls';controls.setAttribute('aria-label','Choose report preview');
- const dots=panels.map((p,i)=>{const b=document.createElement('button');b.type='button';b.className='report-stack-dot';b.setAttribute('aria-label','Show '+labels[i]);b.addEventListener('click',()=>show(i));controls.append(b);return b;});
- const next=document.createElement('button');next.type='button';next.className='report-stack-next';next.innerHTML='<svg width="22" height="30" viewBox="0 0 22 30" aria-hidden="true"><path d="m6 4 11 11L6 26" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>';next.addEventListener('click',()=>show(1-index));stage.append(next,controls);
- const rear=document.createElement('button');rear.type='button';rear.className='report-stack-rear-label';rear.addEventListener('click',()=>show(1-index));stage.append(rear);
- const desktop=matchMedia('(min-width:901px)');let index=0;
- function show(value){index=value;render();}
- function render(){const enabled=desktop.matches;root.classList.toggle('report-deck-enabled',enabled);root.classList.toggle('report-show-progress',index===1);
-  panels.forEach((p,i)=>{p.classList.toggle('report-is-front',i===index);p.classList.toggle('report-is-back',i!==index);if(enabled)p.setAttribute('aria-hidden',String(i!==index));else p.removeAttribute('aria-hidden');});
-  dots.forEach((d,i)=>d.setAttribute('aria-pressed',String(i===index)));
-  next.setAttribute('aria-label','Show '+labels[1-index]);rear.textContent=labels[1-index]+' ↗';rear.setAttribute('aria-label',next.getAttribute('aria-label'));
+(()=>{
+ const root=document.querySelector('.worklog-gallery');if(!root)return;
+ const slides=[...root.querySelectorAll('.worklog-slide')],tabs=[...root.querySelectorAll('[role="tab"]')];
+ const stage=root.querySelector('.worklog-stage'),next=root.querySelector('.worklog-next'),status=root.querySelector('.worklog-status');
+ const labels=['Daily standup','Progress update','Calendar','Dashboard'],starts=[0,2,3];let index=0,busy=false;
+ const dots=slides.map((slide,i)=>{const b=document.createElement('button');b.type='button';b.className='worklog-dot';b.setAttribute('aria-label','Show '+labels[i]);b.addEventListener('click',()=>show(i));root.querySelector('.worklog-dots').append(b);return b;});
+ async function show(i,instant=false){
+  const target=(i+slides.length)%slides.length;
+  if(busy)return;
+  if(!instant&&target!==index&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+   busy=true;const current=slides[index].querySelector('img');
+   const box=current.getBoundingClientRect(),host=stage.getBoundingClientRect();
+   const distance=(target-index+slides.length)%slides.length;
+   const rail=document.createElement('div');rail.className='worklog-motion-rail';
+   Object.assign(rail.style,{left:(box.left-host.left)+'px',top:(box.top-host.top)+'px',height:box.height+'px',gap:'18px'});
+   for(let k=0;k<=distance+1;k++){const img=slides[(index+k)%slides.length].querySelector('img').cloneNode();img.removeAttribute('loading');img.removeAttribute('width');img.removeAttribute('height');img.alt='';Object.assign(img.style,{width:box.width+'px',height:box.height+'px',flex:'0 0 '+box.width+'px'});rail.append(img);}
+   stage.append(rail);await Promise.all([...rail.children].map(i=>i.decode().catch(()=>{})));
+   root.classList.add('worklog-is-moving');
+   await rail.animate([{transform:'translateX(0)'},{transform:'translateX(-'+((box.width+18)*distance)+'px)'}],{duration:distance===1?560:700,easing:'cubic-bezier(.22,.68,.16,1)',fill:'forwards'}).finished;
+   index=target;render();rail.remove();root.classList.remove('worklog-is-moving');busy=false;return;
+  }
+  index=target;render();
  }
- panels.forEach((p,i)=>p.querySelector('img').addEventListener('click',()=>{if(desktop.matches&&i!==index)show(i);}));
- stage.addEventListener('keydown',e=>{if(!desktop.matches)return;if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();show(1-index);}});
- desktop.addEventListener('change',render);render();
-});
+ function render(){const category=index<2?0:index-1;
+  slides.forEach((s,j)=>{s.hidden=false;const depth=(j-index+slides.length)%slides.length;s.dataset.depth=depth;s.style.setProperty('--depth',depth);s.setAttribute('aria-hidden',String(depth!==0));s.style.zIndex=String(4-depth);});
+  tabs.forEach((t,j)=>{t.setAttribute('aria-selected',String(j===category));t.tabIndex=j===category?0:-1;});
+  stage.id='worklog-panel';stage.setAttribute('aria-labelledby',tabs[category].id);
+  dots.forEach((d,j)=>d.setAttribute('aria-pressed',String(j===index)));
+  status.textContent=labels[index]+' · '+(index+1)+' of 4';next.setAttribute('aria-label','Next: '+labels[(index+1)%4]);
+ }
+ stage.setAttribute('role','tabpanel');
+ tabs.forEach((t,i)=>{t.addEventListener('click',()=>show(starts[i]));t.addEventListener('keydown',e=>{let n;if(e.key==='ArrowRight')n=(i+1)%3;else if(e.key==='ArrowLeft')n=(i+2)%3;else if(e.key==='Home')n=0;else if(e.key==='End')n=2;else return;e.preventDefault();show(starts[n]);tabs[n].focus();});});
+ next.addEventListener('click',()=>show(index+1));show(0,true);
+})();

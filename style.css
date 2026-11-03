@@ -3038,3 +3038,87 @@ a:hover .inline-link-arrow[data-direction=right],a:focus-visible .inline-link-ar
 
 /* More breathing room between testing and implementation. */
 .dusk-case .case article>section#testing+section#build{margin-top:72px}
+
+/* November 2: one four-screen gallery; category tabs and sequential navigation. */
+.dusk-case .worklog-tabs{display:flex;border-bottom:1px solid #e5e0ee;margin:24px 0 28px}
+.dusk-case .worklog-tabs button{position:relative;flex:1;border:0;background:transparent;padding:16px 12px;font:inherit;font-size:16px;font-weight:500;color:#666071;cursor:pointer}
+.dusk-case .worklog-tabs button[aria-selected="true"]{color:#7b60e3;font-weight:600}
+.dusk-case .worklog-tabs button[aria-selected="true"]:after{content:"";position:absolute;bottom:-1px;left:28%;right:28%;height:3px;background:#7b60e3;border-radius:2px}
+.dusk-case .worklog-stage{position:relative;padding-right:72px}
+.dusk-case .worklog-slide[hidden]{display:none!important}
+.dusk-case .worklog-slide{animation:worklog-arrive .24s ease-out}
+.dusk-case #product .worklog-slide .report-use-case{display:block;margin:0 0 18px}
+.dusk-case #product .worklog-slide .report-use-case h4{margin:0 0 5px;font-size:18px}
+.dusk-case #product .worklog-slide .report-use-case p{margin:0;max-width:none;font-size:15px}
+.dusk-case .worklog-slide>img{display:block;width:100%;height:auto;border-radius:16px}
+.dusk-case .worklog-next{position:absolute;right:0;top:54%;width:48px;height:48px;display:grid;place-items:center;border:1px solid #ffffffcc;border-radius:50%;background:#a6a4aa;color:white;box-shadow:0 3px 10px #231e451a;cursor:pointer}
+.dusk-case .worklog-next:hover{background:#89858f}
+.dusk-case .worklog-bottom{display:flex;align-items:center;gap:16px;margin-top:20px}
+.dusk-case .worklog-dots{display:flex;gap:10px;padding:10px 13px;background:#eeecf1;border-radius:24px}
+.dusk-case .worklog-dot{width:12px;height:12px;padding:0;border:0;border-radius:50%;background:#cbc6d5;cursor:pointer}
+.dusk-case .worklog-dot[aria-pressed="true"]{background:#7662bc}
+.dusk-case .worklog-status{font-size:13px;color:#777180}
+.dusk-case .worklog-gallery button:focus-visible{outline:2px solid #7b60e3;outline-offset:4px}
+@keyframes worklog-arrive{from{opacity:.5;transform:translateX(8px)}to{opacity:1;transform:none}}
+@media(max-width:600px){.dusk-case .worklog-stage{padding-right:0;padding-bottom:62px}.dusk-case .worklog-next{top:auto;bottom:0;right:0;width:44px;height:44px}.dusk-case .worklog-tabs button{font-size:14px;padding:14px 6px}.dusk-case .worklog-bottom{margin-top:12px}}
+@media(prefers-reduced-motion:reduce){.dusk-case .worklog-slide{animation:none}}
+
+/* Fit complete previews at 100% zoom; keep the section heading compact. */
+.dusk-case #product .worklog-gallery>.walkthrough-part-title{margin-bottom:10px}
+.dusk-case #product .worklog-gallery>.report-walkthrough-intro{margin:0 0 18px}
+.dusk-case .worklog-tabs{justify-content:flex-start;gap:32px;margin:0 0 18px}
+.dusk-case .worklog-tabs button{flex:0 0 auto;padding:11px 4px;font-size:15px}
+.dusk-case .worklog-tabs button[aria-selected="true"]:after{left:0;right:0;height:2px}
+.dusk-case .worklog-stage{width:fit-content;max-width:100%;padding-right:64px;box-sizing:border-box}
+.dusk-case #product .worklog-slide .report-use-case{margin-bottom:12px}
+.dusk-case #product .worklog-slide .report-use-case h4{font-size:17px;margin-bottom:3px}
+.dusk-case #product .worklog-slide .report-use-case p{font-size:14px;line-height:1.5}
+.dusk-case .worklog-slide>img{width:auto;max-width:100%;height:auto;max-height:calc(100svh - 380px);object-fit:contain;object-position:left top}
+.dusk-case .worklog-bottom{margin-top:14px;gap:12px}
+.dusk-case .worklog-dots{padding:8px 11px;gap:9px}
+.dusk-case .worklog-dot{width:10px;height:10px}
+@media(max-width:600px){.dusk-case .worklog-stage{width:100%;padding-right:0;padding-bottom:54px}.dusk-case .worklog-slide>img{width:100%;max-height:none}.dusk-case .worklog-tabs{gap:24px}.dusk-case .worklog-tabs button{font-size:14px}.dusk-case .worklog-bottom{margin-top:8px}}
+
+/* Preview: four interface cards in a single stack. */
+.dusk-case .worklog-stage{display:grid;grid-template-columns:minmax(0,1fr);padding-right:150px;isolation:isolate}
+.dusk-case .worklog-slide{grid-area:1 / 1;position:relative;min-width:0;animation:none;transform:translate(calc(var(--depth)*24px),calc(var(--depth)*7px));transition:transform .35s ease;pointer-events:none}
+.dusk-case .worklog-slide[data-depth="0"]{pointer-events:auto}
+.dusk-case .worklog-slide:not([data-depth="0"]) .report-use-case{visibility:hidden}
+.dusk-case .worklog-slide>img{box-shadow:0 5px 14px #29223b14;background:#eee8f5}
+.dusk-case .worklog-slide:not([data-depth="0"])>img{filter:brightness(.95)}
+.dusk-case .worklog-next{z-index:8;right:0}
+.dusk-case .worklog-bottom{margin-top:34px}
+@media(max-width:600px){.dusk-case .worklog-stage{padding-right:36px;padding-bottom:62px}.dusk-case .worklog-slide{transform:translate(calc(var(--depth)*9px),calc(var(--depth)*4px))}.dusk-case .worklog-bottom{margin-top:8px}}
+@media(prefers-reduced-motion:reduce){.dusk-case .worklog-slide{transition:none}}
+
+/* Refined stack: quiet card edges, not repeated application windows. */
+.dusk-case .worklog-slide{transform:none;transition:none}
+.dusk-case .worklog-slide>img{box-shadow:0 5px 14px #29223b12}
+.dusk-case .worklog-slide:not([data-depth="0"]){transform:translateX(calc(var(--depth)*15px));}
+.dusk-case .worklog-slide:not([data-depth="0"])>img{visibility:hidden;filter:none;box-shadow:none}
+.dusk-case .worklog-slide:not([data-depth="0"]):after{content:"";position:absolute;left:0;right:0;top:calc(60px + var(--depth)*10px);bottom:calc(var(--depth)*10px);border-radius:16px;background:linear-gradient(125deg,#eae4f6,#f2e4e1);border:1px solid #e6deeb;z-index:-1}
+.dusk-case .worklog-bottom{margin-top:16px}
+@media(max-width:600px){.dusk-case .worklog-slide:not([data-depth="0"]){transform:translateX(calc(var(--depth)*8px))}.dusk-case .worklog-slide:not([data-depth="0"]):after{top:calc(76px + var(--depth)*6px);bottom:calc(var(--depth)*6px);border-radius:12px}}
+
+/* Current screen plus a faded quarter-width preview of the next screen. */
+.dusk-case .worklog-stage{padding-right:clamp(140px,18vw,235px);overflow:hidden}
+.dusk-case .worklog-slide:after{display:none!important}
+.dusk-case .worklog-slide{transform:none!important}
+.dusk-case .worklog-slide:not([data-depth="0"]){visibility:hidden}
+.dusk-case .worklog-slide[data-depth="1"]{visibility:visible;transform:translateX(calc(100% + 18px))!important}
+.dusk-case .worklog-slide[data-depth="1"]>img{visibility:visible;filter:none;box-shadow:none;opacity:.8;mask-image:linear-gradient(to right,#000 0%,transparent 28%);-webkit-mask-image:linear-gradient(to right,#000 0%,transparent 28%)}
+.dusk-case .worklog-slide[data-depth="0"]>img{box-shadow:none}
+.dusk-case .worklog-next{right:12px;top:54%;background:#a6a4aa}
+@media(max-width:600px){.dusk-case .worklog-stage{padding-right:64px;padding-bottom:54px}.dusk-case .worklog-slide[data-depth="1"]{transform:translateX(calc(100% + 10px))!important}.dusk-case .worklog-next{right:0;top:auto;bottom:0}}
+
+/* Continuous image movement through a fixed white edge fade. */
+.dusk-case .worklog-slide[data-depth="1"]>img{mask-image:none;-webkit-mask-image:none;opacity:1}
+.dusk-case .worklog-stage:before{content:"";position:absolute;right:0;top:60px;bottom:0;width:clamp(140px,18vw,235px);background:linear-gradient(90deg,transparent 0%,#fff 92%);z-index:6;pointer-events:none}
+.dusk-case .worklog-motion-rail{position:absolute;display:flex;z-index:5;pointer-events:none;will-change:transform}
+.dusk-case .worklog-motion-rail>img{display:block;max-width:none;object-fit:contain;border-radius:16px}
+.dusk-case .worklog-is-moving .worklog-slide>img{visibility:hidden!important}
+.dusk-case .worklog-next{z-index:8}
+@media(max-width:600px){.dusk-case .worklog-stage:before{width:64px;top:76px;bottom:54px}}
+
+/* Keep the work-log introduction from ending in a short orphan line. */
+.dusk-case #product .worklog-gallery>.report-walkthrough-intro{text-wrap:pretty}
